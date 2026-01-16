@@ -17,8 +17,16 @@ const WebitorData = (function() {
     console.log('Webitor: Initializing with data file:', dataFile);
 
     try {
-      // Load data from JSON file
-      const response = await fetch(dataFile);
+      // Load data from JSON file with cache busting
+      const cacheBuster = `?_=${Date.now()}`;
+      const response = await fetch(dataFile + cacheBuster, {
+        cache: 'no-store', // Disable caching
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        }
+      });
       if (!response.ok) {
         throw new Error(`Failed to load data file: ${dataFile}`);
       }
@@ -199,15 +207,24 @@ const WebitorData = (function() {
     const keys = path.split('.');
     const lastKey = keys.pop();
     const target = keys.reduce((current, key) => {
-      // Handle array indices like "articles[0]"
+      // Handle array indices like "articles[0]" or numeric keys like "0"
       const match = key.match(/^(.+)\[(\d+)\]$/);
       if (match) {
         return current[match[1]][parseInt(match[2])];
       }
+      // Handle numeric array indices in dot notation (e.g., "paragraphs.0")
+      if (/^\d+$/.test(key)) {
+        return current[parseInt(key)];
+      }
       return current[key];
     }, obj);
 
-    target[lastKey] = value;
+    // Handle the last key - it could also be a numeric array index
+    if (/^\d+$/.test(lastKey)) {
+      target[parseInt(lastKey)] = value;
+    } else {
+      target[lastKey] = value;
+    }
   }
 
   /**
@@ -276,6 +293,20 @@ const WebitorData = (function() {
   }
 
   /**
+   * Programmatically update a value in the data model
+   * This is called by the extension when content is edited
+   */
+  function updateValue(path, value) {
+    if (path) {
+      console.log(`Webitor: Programmatically updated ${path} to "${value}"`);
+      console.log('Before update, currentData:', JSON.parse(JSON.stringify(currentData.data)));
+      setValueByPath(currentData.data, path, value);
+      console.log('After update, currentData:', JSON.parse(JSON.stringify(currentData.data)));
+      console.log('originalData (for comparison):', JSON.parse(JSON.stringify(originalData.data)));
+    }
+  }
+
+  /**
    * Get changes between original and current data
    */
   function getChanges() {
@@ -330,6 +361,9 @@ const WebitorData = (function() {
 
   return {
     init: init,
-    getChanges: getChanges
+    getChanges: getChanges,
+    enableEditing: enableEditing,
+    disableEditing: disableEditing,
+    updateValue: updateValue
   };
 })();
