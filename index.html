@@ -11,8 +11,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1 data-editable="text">Webitor Primary School</h1>
-                    <p class="tagline" data-editable="text">Inspiring Young Minds</p>
+                    <h1 data-bind="header.title"></h1>
+                    <p class="tagline" data-bind="header.tagline"></p>
                 </div>
                 <nav>
                     <ul>
@@ -31,17 +31,17 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h2 data-editable="text">Welcome to Webitor Primary School</h2>
-            <p data-editable="text">A nurturing environment where every child thrives</p>
-            <a href="admissions.html" class="btn btn-primary" data-editable="text">Apply Now</a>
+            <h2 data-bind="hero.title"></h2>
+            <p data-bind="hero.subtitle"></p>
+            <a data-bind-href="hero.cta_link" class="btn btn-primary"><span data-bind="hero.cta_text"></span></a>
         </div>
     </section>
 
     <section class="announcements">
         <div class="container">
             <div class="announcement-bar">
-                <span class="announcement-label" data-editable="text">Latest News:</span>
-                <span data-editable="text">Spring Term begins Monday 6th January 2026 | Open Day - Saturday 25th January 10am-2pm</span>
+                <span class="announcement-label" data-bind="announcement.label"></span>
+                <span data-bind="announcement.text"></span>
             </div>
         </div>
     </section>
@@ -50,13 +50,16 @@
         <div class="container">
             <div class="content-grid">
                 <div class="content-text">
-                    <h2 data-editable="text">Welcome from Our Headteacher</h2>
-                    <p data-editable="text">At Webitor Primary School, we are committed to providing an outstanding education for all our pupils. Our dedicated staff work tirelessly to ensure every child reaches their full potential in a safe, nurturing environment.</p>
-                    <p data-editable="text">We believe in developing the whole child - academically, socially, and emotionally. Our broad and balanced curriculum is designed to inspire curiosity, creativity, and a lifelong love of learning.</p>
-                    <p class="signature" data-editable="text">Mrs. Sarah Thompson<br><span class="title">Headteacher</span></p>
+                    <h2 data-bind="welcome.heading"></h2>
+                    <p data-bind="welcome.paragraphs.0"></p>
+                    <p data-bind="welcome.paragraphs.1"></p>
+                    <p class="signature">
+                        <span data-bind="welcome.signature"></span><br>
+                        <span class="title" data-bind="welcome.signature_title"></span>
+                    </p>
                 </div>
                 <div class="content-image">
-                    <img src="images/students-learning.jpg" alt="Students engaged in learning">
+                    <img data-bind-src="welcome.image" alt="">
                 </div>
             </div>
         </div>
@@ -64,98 +67,53 @@
 
     <section class="features">
         <div class="container">
-            <h2 data-editable="text">Why Choose Webitor Primary?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3 data-editable="text">Outstanding Teaching</h3>
-                    <p data-editable="text">Experienced, passionate teachers committed to excellence in education</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌟</div>
-                    <h3 data-editable="text">Ofsted Outstanding</h3>
-                    <p data-editable="text">Rated Outstanding in all areas by Ofsted inspectors</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3 data-editable="text">Creative Curriculum</h3>
-                    <p data-editable="text">Enriching opportunities in arts, music, drama, and sports</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
-                    <h3 data-editable="text">Strong Community</h3>
-                    <p data-editable="text">Supportive partnership between school, families, and the community</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3 data-editable="text">Modern Facilities</h3>
-                    <p data-editable="text">Well-resourced classrooms with the latest learning technology</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤝</div>
-                    <h3 data-editable="text">Pastoral Care</h3>
-                    <p data-editable="text">Dedicated wellbeing support for every child's emotional health</p>
-                </div>
+            <h2 data-bind="features.heading"></h2>
+            <div class="features-grid" data-repeat="features.items">
+                <template data-template="feature">
+                    <div class="feature-card">
+                        <div class="feature-icon" data-bind="icon"></div>
+                        <h3 data-bind="title"></h3>
+                        <p data-bind="description"></p>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="quick-links">
         <div class="container">
-            <div class="quick-links-grid">
-                <a href="admissions.html" class="quick-link-card">
-                    <h3 data-editable="text">Admissions</h3>
-                    <p data-editable="text">Find out how to apply for a place at our school</p>
-                    <span class="arrow">→</span>
-                </a>
-                <a href="parents.html" class="quick-link-card">
-                    <h3 data-editable="text">Parent Hub</h3>
-                    <p data-editable="text">Term dates, policies, and important information</p>
-                    <span class="arrow">→</span>
-                </a>
-                <a href="curriculum.html" class="quick-link-card">
-                    <h3 data-editable="text">Our Curriculum</h3>
-                    <p data-editable="text">Discover our approach to teaching and learning</p>
-                    <span class="arrow">→</span>
-                </a>
+            <div class="quick-links-grid" data-repeat="quick_links">
+                <template data-template="quick-link">
+                    <a data-bind-href="link" class="quick-link-card">
+                        <h3 data-bind="title"></h3>
+                        <p data-bind="description"></p>
+                        <span class="arrow">→</span>
+                    </a>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="news-preview">
         <div class="container">
-            <h2 data-editable="text">Latest News & Events</h2>
-            <div class="news-grid">
-                <article class="news-card">
-                    <img src="images/christmas-play.jpg" alt="Christmas nativity performance" data-editable="image">
-                    <div class="news-content">
-                        <span class="date" data-editable="text">15 December 2025</span>
-                        <h3 data-editable="text">Christmas Nativity Success</h3>
-                        <p data-editable="text">Our Year 2 pupils delighted audiences with their wonderful nativity performance.</p>
-                        <a href="news.html">Read more →</a>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <img src="images/sports-day.jpg" alt="Sports day activities" data-editable="image">
-                    <div class="news-content">
-                        <span class="date" data-editable="text">10 December 2025</span>
-                        <h3 data-editable="text">Winter Sports Festival</h3>
-                        <p data-editable="text">Fantastic effort from all year groups at our annual winter sports festival.</p>
-                        <a href="news.html">Read more →</a>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <img src="images/reading-award.jpg" alt="Students with reading awards" data-editable="image">
-                    <div class="news-content">
-                        <span class="date" data-editable="text">5 December 2025</span>
-                        <h3 data-editable="text">Reading Champions</h3>
-                        <p data-editable="text">Celebrating our pupils who have achieved their reading milestones.</p>
-                        <a href="news.html">Read more →</a>
-                    </div>
-                </article>
+            <h2 data-bind="news_preview.heading"></h2>
+            <div class="news-grid" data-repeat="news_preview.articles">
+                <template data-template="news-article">
+                    <article class="news-card" data-id-bind="id">
+                        <img data-bind-src="image" alt="">
+                        <div class="news-content">
+                            <span class="date" data-bind="date"></span>
+                            <h3 data-bind="title"></h3>
+                            <p data-bind="excerpt"></p>
+                            <a data-bind-href="link">Read more →</a>
+                        </div>
+                    </article>
+                </template>
             </div>
             <div class="center-btn">
-                <a href="news.html" class="btn btn-secondary" data-editable="text">View All News</a>
+                <a data-bind-href="news_preview.view_all_link" class="btn btn-secondary">
+                    <span data-bind="news_preview.view_all_text"></span>
+                </a>
             </div>
         </div>
     </section>
@@ -164,19 +122,15 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4 data-editable="text">Webitor Primary School</h4>
-                    <p data-editable="text">123 Education Lane<br>
-                    London, SW1A 1AA<br>
-                    United Kingdom</p>
+                    <h4 data-bind="footer.school_info.heading"></h4>
+                    <p data-bind="footer.school_info.address" style="white-space: pre-line;"></p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Contact Us</h4>
-                    <p data-editable="text">Tel: 020 1234 5678<br>
-                    Email: office@webitorprimary.sch.uk<br>
-                    Monday-Friday: 8:00am - 4:00pm</p>
+                    <h4 data-bind="footer.contact_info.heading"></h4>
+                    <p data-bind="footer.contact_info.details" style="white-space: pre-line;"></p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Quick Links</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="admissions.html">Admissions</a></li>
@@ -185,7 +139,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Policies</h4>
+                    <h4>Policies</h4>
                     <ul>
                         <li><a href="#">Safeguarding</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -195,9 +149,15 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-editable="text">&copy; 2026 Webitor Primary School. All rights reserved.</p>
+                <p data-bind="footer.copyright"></p>
             </div>
         </div>
     </footer>
+
+    <script src="js/webitor-data.js"></script>
+    <script>
+        // Initialize data-driven rendering
+        WebitorData.init('index.data.json');
+    </script>
 </body>
 </html>

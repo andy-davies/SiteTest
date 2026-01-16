@@ -1,0 +1,126 @@
+{
+  "version": "1.0",
+  "page": "contact",
+  "data": {
+    "header": {
+      "title": "Webitor Primary School",
+      "tagline": "Inspiring Young Minds"
+    },
+    "page_header": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with Webitor Primary School"
+    },
+    "school_office": {
+      "heading": "School Office",
+      "contact_items": [
+        {
+          "icon": "📍",
+          "label": "Address",
+          "content": "Webitor Primary School\n123 Education Lane\nLondon\nSW1A 1AA\nUnited Kingdom"
+        },
+        {
+          "icon": "📞",
+          "label": "Telephone",
+          "content": "020 1234 5678"
+        },
+        {
+          "icon": "📧",
+          "label": "Email",
+          "content": "office@webitorprimary.sch.uk"
+        },
+        {
+          "icon": "⏰",
+          "label": "Office Hours",
+          "content": "Monday - Friday\n8:00am - 4:00pm\n(Term time only)"
+        }
+      ],
+      "emergency": {
+        "heading": "⚠️ Emergency Contact",
+        "description": "For urgent safeguarding concerns outside of school hours, please contact:",
+        "contact": "Local Authority Duty Team: 020 9999 8888"
+      }
+    },
+    "contact_form": {
+      "heading": "Send Us a Message",
+      "submit_button": "Send Message"
+    },
+    "key_contacts": {
+      "heading": "Key Contacts",
+      "contacts": [
+        {
+          "name": "Mrs Sarah Thompson",
+          "role": "Headteacher",
+          "email": "head@webitorprimary.sch.uk",
+          "notes": "Available for appointments - please contact the office"
+        },
+        {
+          "name": "Mr James Wilson",
+          "role": "Deputy Headteacher",
+          "email": "deputy@webitorprimary.sch.uk",
+          "notes": "Curriculum & teaching matters"
+        },
+        {
+          "name": "Mrs Emma Davies",
+          "role": "SENCO",
+          "email": "senco@webitorprimary.sch.uk",
+          "notes": "Special educational needs & disabilities"
+        },
+        {
+          "name": "Mrs Linda Roberts",
+          "role": "School Business Manager",
+          "email": "office@webitorprimary.sch.uk",
+          "notes": "Finance, facilities, wraparound care"
+        }
+      ]
+    },
+    "find_us": {
+      "heading": "Find Us",
+      "map": {
+        "placeholder": "🗺️ Map View",
+        "note": "Interactive map would be embedded here showing school location"
+      },
+      "directions": {
+        "heading": "Directions",
+        "by_car": "By Car: Free parking available on Education Lane and surrounding streets. Please be considerate of local residents.",
+        "by_transport": "By Public Transport: The school is a 5-minute walk from Webitor Station (Northern Line) or a 10-minute walk from the 24, 73, and 134 bus routes.",
+        "by_bike": "By Bike: Bike racks available for children and visitors at the front of the school."
+      }
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How do I report my child's absence?",
+          "answer": "Please call the school office on 020 1234 5678 before 9:00am on each day of absence. You can also report absences via our school app."
+        },
+        {
+          "question": "How can I arrange a school tour?",
+          "answer": "Tours run every Tuesday at 9:30am during term time. Please call the office or use the contact form above to book your place."
+        },
+        {
+          "question": "Who should I contact about my child's learning?",
+          "answer": "Your first point of contact should be your child's class teacher. You can leave a message with the office or send a message via Seesaw."
+        },
+        {
+          "question": "How do I apply for a place at the school?",
+          "answer": "Applications for Reception places are made through your local authority. For in-year admissions, please contact our office."
+        },
+        {
+          "question": "Is there parking at the school?",
+          "answer": "There is no parking on school grounds, but free street parking is available nearby. Please be considerate of residents and avoid blocking driveways."
+        }
+      ]
+    },
+    "footer": {
+      "school_info": {
+        "heading": "Webitor Primary School",
+        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
+      },
+      "contact_info": {
+        "heading": "Contact Us",
+        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
+      },
+      "copyright": "© 2026 Webitor Primary School. All rights reserved."
+    }
+  }
+}

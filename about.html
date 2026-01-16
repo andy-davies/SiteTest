@@ -11,8 +11,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1 data-editable="text">Webitor Primary School</h1>
-                    <p class="tagline" data-editable="text">Inspiring Young Minds</p>
+                    <h1 data-bind="header.title"></h1>
+                    <p class="tagline" data-bind="header.tagline"></p>
                 </div>
                 <nav>
                     <ul>
@@ -31,8 +31,8 @@
 
     <section class="page-header">
         <div class="container">
-            <h1 data-editable="text">About Webitor Primary</h1>
-            <p data-editable="text">Discover our vision, values, and community</p>
+            <h1 data-bind="page_header.title"></h1>
+            <p data-bind="page_header.subtitle"></p>
         </div>
     </section>
 
@@ -40,12 +40,12 @@
         <div class="container">
             <div class="content-grid">
                 <div class="content-text">
-                    <h2 data-editable="text">Our Vision</h2>
-                    <p data-editable="text">At Webitor Primary School, we believe every child deserves an exceptional education that prepares them for life in the modern world. Our vision is to create a learning community where children develop academically, socially, and emotionally.</p>
-                    <p data-editable="text">We strive to nurture confident, creative, and compassionate individuals who are equipped with the skills and knowledge to succeed in an ever-changing world.</p>
+                    <h2 data-bind="vision.heading"></h2>
+                    <p data-bind="vision.paragraphs.0"></p>
+                    <p data-bind="vision.paragraphs.1"></p>
                 </div>
                 <div class="content-image">
-                    <img src="images/school-building.jpg" alt="Webitor Primary School building" data-editable="image">
+                    <img data-bind-src="vision.image" alt="">
                 </div>
             </div>
         </div>
@@ -53,97 +53,63 @@
 
     <section class="values-section">
         <div class="container">
-            <h2 data-editable="text">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3 data-editable="text">Respect</h3>
-                    <p data-editable="text">We treat everyone with kindness, consideration, and dignity. We celebrate diversity and embrace differences.</p>
-                </div>
-                <div class="value-card">
-                    <h3 data-editable="text">Resilience</h3>
-                    <p data-editable="text">We encourage children to persevere, learn from mistakes, and develop a growth mindset.</p>
-                </div>
-                <div class="value-card">
-                    <h3 data-editable="text">Responsibility</h3>
-                    <p data-editable="text">We teach children to take ownership of their actions, learning, and contribution to the community.</p>
-                </div>
-                <div class="value-card">
-                    <h3 data-editable="text">Excellence</h3>
-                    <p data-editable="text">We maintain high expectations and support every child to achieve their very best.</p>
-                </div>
+            <h2 data-bind="core_values.heading"></h2>
+            <div class="values-grid" data-repeat="core_values.values">
+                <template data-template="value">
+                    <div class="value-card">
+                        <h3 data-bind="title"></h3>
+                        <p data-bind="description"></p>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="stats-section">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number" data-editable="text">420</div>
-                    <div class="stat-label" data-editable="text">Pupils on Roll</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-editable="text">30</div>
-                    <div class="stat-label" data-editable="text">Dedicated Staff</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-editable="text">14</div>
-                    <div class="stat-label" data-editable="text">Classes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-editable="text">Outstanding</div>
-                    <div class="stat-label" data-editable="text">Ofsted Rating</div>
-                </div>
+            <div class="stats-grid" data-repeat="stats">
+                <template data-template="stat">
+                    <div class="stat-card">
+                        <div class="stat-number" data-bind="number"></div>
+                        <div class="stat-label" data-bind="label"></div>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="content-section alt-bg">
         <div class="container">
-            <h2 data-editable="text">Our History</h2>
-            <p data-editable="text">Webitor Primary School was established in 1985 and has been serving the local community for nearly four decades. Our school has grown from a small village school to a thriving educational establishment with over 400 pupils.</p>
-            <p data-editable="text">In 2020, we underwent a major refurbishment, creating modern learning spaces while maintaining the character and warmth that makes our school special. We continue to invest in our facilities to ensure our children have access to the best possible learning environment.</p>
+            <h2 data-bind="history.heading"></h2>
+            <p data-bind="history.paragraphs.0"></p>
+            <p data-bind="history.paragraphs.1"></p>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container">
-            <h2 data-editable="text">Leadership & Governance</h2>
-            <div class="staff-grid">
-                <div class="staff-card">
-                    <div class="staff-image">
-                        <img src="images/headteacher.jpg" alt="Mrs Sarah Thompson" data-editable="image">
+            <h2 data-bind="leadership.heading"></h2>
+            <div class="staff-grid" data-repeat="leadership.staff">
+                <template data-template="staff-member">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <img data-bind-src="image" alt="">
+                        </div>
+                        <h3 data-bind="name"></h3>
+                        <p class="staff-role" data-bind="role"></p>
+                        <p data-bind="description"></p>
                     </div>
-                    <h3 data-editable="text">Mrs Sarah Thompson</h3>
-                    <p class="staff-role" data-editable="text">Headteacher</p>
-                    <p data-editable="text">Mrs Thompson has been our Headteacher since 2018 and has over 20 years of experience in primary education.</p>
-                </div>
-                <div class="staff-card">
-                    <div class="staff-image">
-                        <img src="images/deputy-head.jpg" alt="Mr James Wilson" data-editable="image">
-                    </div>
-                    <h3 data-editable="text">Mr James Wilson</h3>
-                    <p class="staff-role" data-editable="text">Deputy Headteacher</p>
-                    <p data-editable="text">Mr Wilson leads our curriculum development and ensures the highest standards of teaching across the school.</p>
-                </div>
-                <div class="staff-card">
-                    <div class="staff-image">
-                        <img src="images/senco.jpg" alt="Mrs Emma Davies" data-editable="image">
-                    </div>
-                    <h3 data-editable="text">Mrs Emma Davies</h3>
-                    <p class="staff-role" data-editable="text">SENCO</p>
-                    <p data-editable="text">Mrs Davies coordinates our special educational needs provision, ensuring every child receives the support they need.</p>
-                </div>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="content-section alt-bg">
         <div class="container">
-            <h2 data-editable="text">Safeguarding</h2>
-            <p data-editable="text">The safety and wellbeing of our pupils is our top priority. We are committed to safeguarding and promoting the welfare of all children and expect all staff, governors, volunteers, and visitors to share this commitment.</p>
-            <p data-editable="text">Our Designated Safeguarding Lead is Mrs Sarah Thompson (Headteacher), and our Deputy Safeguarding Lead is Mr James Wilson (Deputy Headteacher).</p>
-            <p data-editable="text">If you have any concerns about a child's welfare, please contact the school office immediately on 020 1234 5678.</p>
+            <h2 data-bind="safeguarding.heading"></h2>
+            <p data-bind="safeguarding.paragraphs.0"></p>
+            <p data-bind="safeguarding.paragraphs.1"></p>
+            <p data-bind="safeguarding.paragraphs.2"></p>
         </div>
     </section>
 
@@ -151,19 +117,15 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4 data-editable="text">Webitor Primary School</h4>
-                    <p data-editable="text">123 Education Lane<br>
-                    London, SW1A 1AA<br>
-                    United Kingdom</p>
+                    <h4 data-bind="footer.school_info.heading"></h4>
+                    <p data-bind="footer.school_info.address" style="white-space: pre-line;"></p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Contact Us</h4>
-                    <p data-editable="text">Tel: 020 1234 5678<br>
-                    Email: office@webitorprimary.sch.uk<br>
-                    Monday-Friday: 8:00am - 4:00pm</p>
+                    <h4 data-bind="footer.contact_info.heading"></h4>
+                    <p data-bind="footer.contact_info.details" style="white-space: pre-line;"></p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Quick Links</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="admissions.html">Admissions</a></li>
@@ -172,7 +134,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Policies</h4>
+                    <h4>Policies</h4>
                     <ul>
                         <li><a href="#">Safeguarding</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -182,9 +144,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-editable="text">&copy; 2026 Webitor Primary School. All rights reserved.</p>
+                <p data-bind="footer.copyright"></p>
             </div>
         </div>
     </footer>
+
+    <script src="js/webitor-data.js"></script>
+    <script>
+        WebitorData.init('about.data.json');
+    </script>
 </body>
 </html>

@@ -11,8 +11,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1 data-editable="text">Webitor Primary School</h1>
-                    <p class="tagline" data-editable="text">Inspiring Young Minds</p>
+                    <h1 data-bind="header.title"></h1>
+                    <p class="tagline" data-bind="header.tagline"></p>
                 </div>
                 <nav>
                     <ul>
@@ -31,99 +31,71 @@
 
     <section class="page-header">
         <div class="container">
-            <h1 data-editable="text">Parent Hub</h1>
-            <p data-editable="text">Essential information for parents and carers</p>
+            <h1 data-bind="page_header.title"></h1>
+            <p data-bind="page_header.subtitle"></p>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container">
-            <h2 data-editable="text">Term Dates 2025-26</h2>
-            <div class="term-dates">
-                <div class="term-card">
-                    <h3 data-editable="text">Spring Term 2026</h3>
-                    <p data-editable="text"><strong>Start:</strong> Monday 6th January 2026<br>
-                    <strong>Half Term:</strong> 17th-21st February 2026<br>
-                    <strong>End:</strong> Friday 27th March 2026</p>
-                </div>
-                <div class="term-card">
-                    <h3 data-editable="text">Summer Term 2026</h3>
-                    <p data-editable="text"><strong>Start:</strong> Monday 13th April 2026<br>
-                    <strong>Half Term:</strong> 25th-29th May 2026<br>
-                    <strong>End:</strong> Friday 17th July 2026</p>
-                </div>
-                <div class="term-card">
-                    <h3 data-editable="text">Autumn Term 2026</h3>
-                    <p data-editable="text"><strong>Start:</strong> Monday 7th September 2026<br>
-                    <strong>Half Term:</strong> 26th-30th October 2026<br>
-                    <strong>End:</strong> Friday 18th December 2026</p>
-                </div>
+            <h2 data-bind="term_dates.heading"></h2>
+            <div class="term-dates" data-repeat="term_dates.terms">
+                <template data-template="term">
+                    <div class="term-card">
+                        <h3 data-bind="name"></h3>
+                        <p><strong>Start:</strong> <span data-bind="start"></span><br>
+                        <strong>Half Term:</strong> <span data-bind="half_term"></span><br>
+                        <strong>End:</strong> <span data-bind="end"></span></p>
+                    </div>
+                </template>
             </div>
             <div class="inset-days">
-                <h4 data-editable="text">INSET Days (school closed to pupils):</h4>
-                <p data-editable="text">5th January 2026, 28th March 2026, 6th July 2026, 17th July 2026, 4th September 2026</p>
+                <h4 data-bind="term_dates.inset_days.heading"></h4>
+                <p data-bind="term_dates.inset_days.dates"></p>
             </div>
         </div>
     </section>
 
     <section class="content-section alt-bg">
         <div class="container">
-            <h2 data-editable="text">Daily Routines</h2>
-            <div class="routine-grid">
-                <div class="routine-card">
-                    <h3 data-editable="text">⏰ School Hours</h3>
-                    <p data-editable="text"><strong>Gates Open:</strong> 8:35am<br>
-                    <strong>Registration:</strong> 8:45am<br>
-                    <strong>Morning Session:</strong> 8:45am - 12:00pm<br>
-                    <strong>Afternoon Session:</strong> 1:00pm - 3:15pm<br>
-                    <strong>Collection:</strong> 3:15pm</p>
-                    <p class="note" data-editable="text">Please ensure children arrive by 8:45am. Late arrivals must sign in at the office.</p>
-                </div>
-                <div class="routine-card">
-                    <h3 data-editable="text">🍎 Lunchtimes</h3>
-                    <p data-editable="text">We offer healthy, freshly prepared hot meals daily, plus a vegetarian option and packed lunch alternative.</p>
-                    <p data-editable="text"><strong>Cost:</strong> Free for Reception, Year 1 & Year 2<br>
-                    £2.50 per day for Years 3-6</p>
-                    <p data-editable="text">Menus are available on our website and sent home weekly.</p>
-                </div>
-                <div class="routine-card">
-                    <h3 data-editable="text">👕 School Uniform</h3>
-                    <p data-editable="text"><strong>Daily:</strong> Navy blue jumper/cardigan, white polo shirt, grey/black trousers or skirt<br>
-                    <strong>PE Days:</strong> Navy/white PE kit, trainers<br>
-                    <strong>Optional:</strong> School tie, navy fleece</p>
-                    <p data-editable="text">Uniform can be purchased from our supplier or any retailer.</p>
-                </div>
-                <div class="routine-card">
-                    <h3 data-editable="text">🌡️ Attendance</h3>
-                    <p data-editable="text">Excellent attendance is vital for your child's progress. Our target is 96%+.</p>
-                    <p data-editable="text"><strong>Report Absence:</strong> Call the school office before 9:00am on each day of absence.<br>
-                    Tel: 020 1234 5678</p>
-                    <p data-editable="text">Medical appointments should be made outside school hours where possible.</p>
-                </div>
+            <h2 data-bind="daily_routines.heading"></h2>
+            <div class="routine-grid" data-repeat="daily_routines.routines">
+                <template data-template="routine">
+                    <div class="routine-card">
+                        <h3><span data-bind="icon"></span> <span data-bind="title"></span></h3>
+                        <p data-bind="details"></p>
+                        <p data-bind="intro"></p>
+                        <p data-bind="cost"></p>
+                        <p data-bind="daily"></p>
+                        <p data-bind="pe"></p>
+                        <p data-bind="optional"></p>
+                        <p data-bind="report"></p>
+                        <p class="note" data-bind="note"></p>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container">
-            <h2 data-editable="text">Wraparound Care</h2>
+            <h2 data-bind="wraparound_care.heading"></h2>
             <div class="content-grid">
                 <div class="content-text">
-                    <h3 data-editable="text">🌅 Breakfast Club</h3>
-                    <p data-editable="text"><strong>Time:</strong> 7:45am - 8:45am<br>
-                    <strong>Cost:</strong> £4.50 per session</p>
-                    <p data-editable="text">Includes healthy breakfast and supervised activities.</p>
+                    <h3 data-bind="wraparound_care.breakfast_club.title"></h3>
+                    <p><strong data-bind="wraparound_care.breakfast_club.time"></strong><br>
+                    <strong data-bind="wraparound_care.breakfast_club.cost"></strong></p>
+                    <p data-bind="wraparound_care.breakfast_club.description"></p>
 
-                    <h3 data-editable="text">🌙 After School Club</h3>
-                    <p data-editable="text"><strong>Time:</strong> 3:15pm - 6:00pm<br>
-                    <strong>Cost:</strong> £10 per session (3:15-6:00pm)<br>
-                    £6 per session (3:15-4:30pm)</p>
-                    <p data-editable="text">Includes snacks, homework support, and enrichment activities.</p>
+                    <h3 data-bind="wraparound_care.after_school_club.title"></h3>
+                    <p><strong data-bind="wraparound_care.after_school_club.time"></strong><br>
+                    <strong data-bind="wraparound_care.after_school_club.cost"></strong></p>
+                    <p data-bind="wraparound_care.after_school_club.description"></p>
 
-                    <p data-editable="text"><strong>Booking:</strong> Must be booked in advance via the school office. Limited spaces available.</p>
+                    <p><strong data-bind="wraparound_care.booking"></strong></p>
                 </div>
                 <div class="content-image">
-                    <img src="images/after-school-club.jpg" alt="Children at after school club" data-editable="image">
+                    <img data-bind-src="wraparound_care.image" data-bind-alt="wraparound_care.image_alt">
                 </div>
             </div>
         </div>
@@ -131,101 +103,66 @@
 
     <section class="content-section alt-bg">
         <div class="container">
-            <h2 data-editable="text">Communication</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3 data-editable="text">📱 School App</h3>
-                    <p data-editable="text">Download our school app for instant updates, news, and the ability to report absences.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-editable="text">📧 Weekly Newsletter</h3>
-                    <p data-editable="text">Sent every Friday via email and available on our website.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-editable="text">📚 Seesaw</h3>
-                    <p data-editable="text">Our online learning platform where teachers share work and celebrate achievements.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-editable="text">👥 Parent Consultations</h3>
-                    <p data-editable="text">Termly meetings to discuss your child's progress - dates sent in advance.</p>
-                </div>
+            <h2 data-bind="communication.heading"></h2>
+            <div class="features-grid" data-repeat="communication.methods">
+                <template data-template="method">
+                    <div class="feature-card">
+                        <h3><span data-bind="icon"></span> <span data-bind="title"></span></h3>
+                        <p data-bind="description"></p>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container">
-            <h2 data-editable="text">Supporting Learning at Home</h2>
+            <h2 data-bind="supporting_learning.heading"></h2>
             <div class="homework-section">
-                <h3 data-editable="text">📖 Reading</h3>
-                <p data-editable="text">Children should read at home for at least 10-15 minutes daily. Please sign the reading record to help us track progress.</p>
+                <h3 data-bind="supporting_learning.reading.title"></h3>
+                <p data-bind="supporting_learning.reading.description"></p>
 
-                <h3 data-editable="text">✏️ Homework</h3>
-                <ul>
-                    <li><strong>Reception & KS1:</strong> Weekly reading and phonics practice</li>
-                    <li><strong>Years 3-4:</strong> Reading, spellings, and one piece of English or Maths (30 mins)</li>
-                    <li><strong>Years 5-6:</strong> Reading, spellings, and English or Maths homework (45 mins)</li>
+                <h3 data-bind="supporting_learning.homework.title"></h3>
+                <ul data-repeat="supporting_learning.homework.levels">
+                    <template data-template="level">
+                        <li><strong data-bind="level"></strong> <span data-bind="work"></span></li>
+                    </template>
                 </ul>
 
-                <h3 data-editable="text">🔢 Times Tables</h3>
-                <p data-editable="text">Children in Years 2-6 should practice times tables regularly. We recommend Times Tables Rock Stars (online login provided).</p>
+                <h3 data-bind="supporting_learning.times_tables.title"></h3>
+                <p data-bind="supporting_learning.times_tables.description"></p>
             </div>
         </div>
     </section>
 
     <section class="content-section alt-bg">
         <div class="container">
-            <h2 data-editable="text">Parent Partnership</h2>
-            <p data-editable="text">We believe parents are partners in their child's education. There are many ways to get involved:</p>
+            <h2 data-bind="parent_partnership.heading"></h2>
+            <p data-bind="parent_partnership.intro"></p>
 
-            <div class="partnership-grid">
-                <div class="partnership-card">
-                    <h3 data-editable="text">🎉 PTA (Parent-Teacher Association)</h3>
-                    <p data-editable="text">Our active PTA organizes fundraising events and social activities throughout the year. New members always welcome!</p>
-                    <p data-editable="text"><strong>Contact:</strong> pta@webitorprimary.sch.uk</p>
-                </div>
-                <div class="partnership-card">
-                    <h3 data-editable="text">👨‍🏫 Parent Volunteers</h3>
-                    <p data-editable="text">Help with reading, accompany school trips, or assist with events. All volunteers require a DBS check.</p>
-                    <p data-editable="text"><strong>Contact:</strong> office@webitorprimary.sch.uk</p>
-                </div>
-                <div class="partnership-card">
-                    <h3 data-editable="text">🗳️ Parent Governors</h3>
-                    <p data-editable="text">Join our governing body and help shape the strategic direction of the school.</p>
-                    <p data-editable="text">Elections held when vacancies arise - watch for announcements.</p>
-                </div>
+            <div class="partnership-grid" data-repeat="parent_partnership.opportunities">
+                <template data-template="opportunity">
+                    <div class="partnership-card">
+                        <h3><span data-bind="icon"></span> <span data-bind="title"></span></h3>
+                        <p data-bind="description"></p>
+                        <p data-bind="contact"></p>
+                        <p data-bind="note"></p>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container">
-            <h2 data-editable="text">Policies & Documents</h2>
-            <div class="documents-grid">
-                <a href="#" class="document-link">
-                    <span class="doc-icon">📄</span>
-                    <span class="doc-name" data-editable="text">Safeguarding & Child Protection Policy</span>
-                </a>
-                <a href="#" class="document-link">
-                    <span class="doc-icon">📄</span>
-                    <span class="doc-name" data-editable="text">Behaviour Policy</span>
-                </a>
-                <a href="#" class="document-link">
-                    <span class="doc-icon">📄</span>
-                    <span class="doc-name" data-editable="text">Anti-Bullying Policy</span>
-                </a>
-                <a href="#" class="document-link">
-                    <span class="doc-icon">📄</span>
-                    <span class="doc-name" data-editable="text">SEND Policy</span>
-                </a>
-                <a href="#" class="document-link">
-                    <span class="doc-icon">📄</span>
-                    <span class="doc-name" data-editable="text">Attendance Policy</span>
-                </a>
-                <a href="#" class="document-link">
-                    <span class="doc-icon">📄</span>
-                    <span class="doc-name" data-editable="text">Complaints Procedure</span>
-                </a>
+            <h2 data-bind="policies.heading"></h2>
+            <div class="documents-grid" data-repeat="policies.documents">
+                <template data-template="document">
+                    <a href="#" class="document-link">
+                        <span class="doc-icon">📄</span>
+                        <span class="doc-name" data-bind="$self"></span>
+                    </a>
+                </template>
             </div>
         </div>
     </section>
@@ -234,19 +171,15 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4 data-editable="text">Webitor Primary School</h4>
-                    <p data-editable="text">123 Education Lane<br>
-                    London, SW1A 1AA<br>
-                    United Kingdom</p>
+                    <h4 data-bind="footer.school_info.heading"></h4>
+                    <p data-bind="footer.school_info.address"></p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Contact Us</h4>
-                    <p data-editable="text">Tel: 020 1234 5678<br>
-                    Email: office@webitorprimary.sch.uk<br>
-                    Monday-Friday: 8:00am - 4:00pm</p>
+                    <h4 data-bind="footer.contact_info.heading"></h4>
+                    <p data-bind="footer.contact_info.details"></p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Quick Links</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="admissions.html">Admissions</a></li>
@@ -255,7 +188,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 data-editable="text">Policies</h4>
+                    <h4>Policies</h4>
                     <ul>
                         <li><a href="#">Safeguarding</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -265,9 +198,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-editable="text">&copy; 2026 Webitor Primary School. All rights reserved.</p>
+                <p data-bind="footer.copyright"></p>
             </div>
         </div>
     </footer>
+
+    <script src="js/webitor-data.js"></script>
+    <script>WebitorData.init('parents.data.json');</script>
 </body>
 </html>

@@ -1,0 +1,175 @@
+{
+  "version": "1.0",
+  "page": "admissions",
+  "data": {
+    "header": {
+      "title": "Webitor Primary School",
+      "tagline": "Inspiring Young Minds"
+    },
+    "page_header": {
+      "title": "Admissions",
+      "subtitle": "Join our thriving school community"
+    },
+    "key_dates": {
+      "heading": "📅 Key Dates for September 2026 Reception Intake",
+      "dates": [
+        {
+          "label": "Application Deadline:",
+          "value": "15th January 2026"
+        },
+        {
+          "label": "Offers Sent:",
+          "value": "16th April 2026"
+        },
+        {
+          "label": "Acceptance Deadline:",
+          "value": "30th April 2026"
+        }
+      ]
+    },
+    "reception_admissions": {
+      "heading": "Applying for Reception (Age 4+)",
+      "intro": "Applications for Reception places must be made through your local authority. We are part of the coordinated admissions scheme.",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Visit Our School",
+          "description": "Book a tour to see our wonderful facilities and meet our staff. Tours run every Tuesday at 9:30am during term time."
+        },
+        {
+          "number": "2",
+          "title": "Complete Your Application",
+          "description": "Apply online through your local authority website by the deadline of 15th January."
+        },
+        {
+          "number": "3",
+          "title": "Receive Your Offer",
+          "description": "You will be notified of your child's school place on National Offer Day in April."
+        },
+        {
+          "number": "4",
+          "title": "Accept & Prepare",
+          "description": "Accept your place and attend our induction sessions in the summer term."
+        }
+      ]
+    },
+    "admissions_criteria": {
+      "heading": "Admissions Criteria",
+      "intro": "If the school is oversubscribed, places will be allocated in the following order of priority:",
+      "criteria": [
+        {
+          "title": "Looked After Children:",
+          "description": "Children in care or previously in care"
+        },
+        {
+          "title": "Medical or Social Needs:",
+          "description": "Children with exceptional medical or social needs evidenced by written professional recommendation"
+        },
+        {
+          "title": "Siblings:",
+          "description": "Children with a brother or sister already attending the school"
+        },
+        {
+          "title": "Distance:",
+          "description": "Children living closest to the school, measured by straight-line distance"
+        }
+      ],
+      "catchment_area": {
+        "heading": "Our Catchment Area",
+        "description": "In recent years, we have been able to offer places to children living within approximately 0.8 miles of the school. However, this can vary each year depending on the number of applications."
+      }
+    },
+    "in_year_admissions": {
+      "heading": "In-Year Admissions",
+      "paragraphs": [
+        "If you wish to apply for a place for your child in Years 1-6, this is known as an in-year admission. Places are only available if there is space in the relevant year group.",
+        "To apply for an in-year place:"
+      ],
+      "steps": [
+        "Contact the school office to check availability: 020 1234 5678",
+        "Complete an in-year application form (available from the school or local authority)",
+        "Submit supporting documentation (proof of address, birth certificate)",
+        "Arrange a visit to meet the Headteacher"
+      ]
+    },
+    "school_tours": {
+      "heading": "School Tours",
+      "intro": "We warmly welcome prospective parents to visit our school and see for themselves the excellent education we provide. Our tours offer the opportunity to:",
+      "benefits": [
+        "See our classrooms and facilities in action",
+        "Meet our Headteacher and staff",
+        "Ask questions about our curriculum and ethos",
+        "Experience the friendly atmosphere of our school"
+      ],
+      "schedule": {
+        "regular_tours": "Tuesdays at 9:30am during term time",
+        "open_day": "Saturday 25th January 2026, 10am-2pm"
+      },
+      "cta_text": "Book a Tour",
+      "image": "images/school-tour.jpg",
+      "image_alt": "Parents on school tour"
+    },
+    "starting_school": {
+      "heading": "Starting School",
+      "intro": "We understand that starting school is a big step for both children and parents. We offer a comprehensive induction programme to help children settle in:",
+      "features": [
+        {
+          "icon": "🎒",
+          "title": "Stay & Play Sessions",
+          "description": "June visits where children can explore the classroom and meet their teacher"
+        },
+        {
+          "icon": "👪",
+          "title": "Parent Information Evening",
+          "description": "Learn about our routines, curriculum, and how to support your child"
+        },
+        {
+          "icon": "📖",
+          "title": "Home Visits",
+          "description": "Optional home visits from your child's teacher before they start"
+        },
+        {
+          "icon": "⏰",
+          "title": "Staggered Start",
+          "description": "Phased entry in September to help children adjust gradually"
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "What is your Published Admission Number (PAN)?",
+          "answer": "Our PAN is 60, meaning we admit 60 children into Reception each year (two classes of 30)."
+        },
+        {
+          "question": "Do you offer nursery places?",
+          "answer": "We do not have a nursery on site, but we work closely with several local nurseries and pre-schools."
+        },
+        {
+          "question": "What are your school hours?",
+          "answer": "School runs from 8:45am to 3:15pm. Children should arrive between 8:35-8:45am."
+        },
+        {
+          "question": "Do you offer wraparound care?",
+          "answer": "Yes, we have a breakfast club (7:45-8:45am) and after-school club (3:15-6:00pm)."
+        },
+        {
+          "question": "What if my child has special educational needs?",
+          "answer": "Please inform us of any SEND requirements on your application. Our SENCO will arrange to meet you to discuss how we can best support your child."
+        }
+      ]
+    },
+    "footer": {
+      "school_info": {
+        "heading": "Webitor Primary School",
+        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
+      },
+      "contact_info": {
+        "heading": "Contact Us",
+        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
+      },
+      "copyright": "© 2026 Webitor Primary School. All rights reserved."
+    }
+  }
+}

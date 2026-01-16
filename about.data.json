@@ -1,0 +1,114 @@
+{
+  "version": "1.0",
+  "page": "about",
+  "data": {
+    "header": {
+      "title": "Webitor Primary School",
+      "tagline": "Inspiring Young Minds"
+    },
+    "page_header": {
+      "title": "About Webitor Primary",
+      "subtitle": "Discover our vision, values, and community"
+    },
+    "vision": {
+      "heading": "Our Vision",
+      "paragraphs": [
+        "At Webitor Primary School, we believe every child deserves an exceptional education that prepares them for life in the modern world. Our vision is to create a learning community where children develop academically, socially, and emotionally.",
+        "We strive to nurture confident, creative, and compassionate individuals who are equipped with the skills and knowledge to succeed in an ever-changing world."
+      ],
+      "image": "images/school-building.jpg",
+      "image_alt": "Webitor Primary School building"
+    },
+    "core_values": {
+      "heading": "Our Core Values",
+      "values": [
+        {
+          "title": "Respect",
+          "description": "We treat everyone with kindness, consideration, and dignity. We celebrate diversity and embrace differences."
+        },
+        {
+          "title": "Resilience",
+          "description": "We encourage children to persevere, learn from mistakes, and develop a growth mindset."
+        },
+        {
+          "title": "Responsibility",
+          "description": "We teach children to take ownership of their actions, learning, and contribution to the community."
+        },
+        {
+          "title": "Excellence",
+          "description": "We maintain high expectations and support every child to achieve their very best."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "number": "420",
+        "label": "Pupils on Roll"
+      },
+      {
+        "number": "30",
+        "label": "Dedicated Staff"
+      },
+      {
+        "number": "14",
+        "label": "Classes"
+      },
+      {
+        "number": "Outstanding",
+        "label": "Ofsted Rating"
+      }
+    ],
+    "history": {
+      "heading": "Our History",
+      "paragraphs": [
+        "Webitor Primary School was established in 1985 and has been serving the local community for nearly four decades. Our school has grown from a small village school to a thriving educational establishment with over 400 pupils.",
+        "In 2020, we underwent a major refurbishment, creating modern learning spaces while maintaining the character and warmth that makes our school special. We continue to invest in our facilities to ensure our children have access to the best possible learning environment."
+      ]
+    },
+    "leadership": {
+      "heading": "Leadership & Governance",
+      "staff": [
+        {
+          "name": "Mrs Sarah Thompson",
+          "role": "Headteacher",
+          "description": "Mrs Thompson has been our Headteacher since 2018 and has over 20 years of experience in primary education.",
+          "image": "images/headteacher.jpg",
+          "image_alt": "Mrs Sarah Thompson"
+        },
+        {
+          "name": "Mr James Wilson",
+          "role": "Deputy Headteacher",
+          "description": "Mr Wilson leads our curriculum development and ensures the highest standards of teaching across the school.",
+          "image": "images/deputy-head.jpg",
+          "image_alt": "Mr James Wilson"
+        },
+        {
+          "name": "Mrs Emma Davies",
+          "role": "SENCO",
+          "description": "Mrs Davies coordinates our special educational needs provision, ensuring every child receives the support they need.",
+          "image": "images/senco.jpg",
+          "image_alt": "Mrs Emma Davies"
+        }
+      ]
+    },
+    "safeguarding": {
+      "heading": "Safeguarding",
+      "paragraphs": [
+        "The safety and wellbeing of our pupils is our top priority. We are committed to safeguarding and promoting the welfare of all children and expect all staff, governors, volunteers, and visitors to share this commitment.",
+        "Our Designated Safeguarding Lead is Mrs Sarah Thompson (Headteacher), and our Deputy Safeguarding Lead is Mr James Wilson (Deputy Headteacher).",
+        "If you have any concerns about a child's welfare, please contact the school office immediately on 020 1234 5678."
+      ]
+    },
+    "footer": {
+      "school_info": {
+        "heading": "Webitor Primary School",
+        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
+      },
+      "contact_info": {
+        "heading": "Contact Us",
+        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
+      },
+      "copyright": "© 2026 Webitor Primary School. All rights reserved."
+    }
+  }
+}
