@@ -411,7 +411,7 @@ const WebitorData = (function() {
       return;
     }
 
-    // Clear existing content (except template and edit button)
+    // Clear existing content (except template, edit button, and remove buttons will be on items being removed)
     Array.from(container.children).forEach(child => {
       if (child !== template && !child.classList?.contains('webitor-array-edit-button')) {
         child.remove();
@@ -432,6 +432,13 @@ const WebitorData = (function() {
         element.classList.add('webitor-editable');
       });
     }
+
+    // Dispatch custom event to notify content script that container was re-rendered
+    // This allows the extension to re-apply editing features like remove buttons
+    container.dispatchEvent(new CustomEvent('webitor-array-rerendered', {
+      bubbles: true,
+      detail: { arrayPath: arrayPath, itemCount: array.length }
+    }));
   }
 
   /**
