@@ -97,7 +97,7 @@
     <section class="news-preview">
         <div class="container">
             <h2 data-bind="news_preview.heading"></h2>
-            <div class="news-grid" data-repeat="news_preview.articles">
+            <div class="news-grid" data-source="news.data.json:latest_news.articles" data-limit="3">
                 <template data-template="news-article">
                     <article class="news-card" data-id-bind="id">
                         <img data-bind-src="image" alt="">

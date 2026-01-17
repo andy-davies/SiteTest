@@ -8,6 +8,7 @@ const WebitorData = (function() {
   let originalData = null;
   let dataFilePath = null;
   let isEditingMode = false;
+  let externalDataCache = {}; // Cache for external data files
 
   /**
    * Initialize: Load data file and render page
@@ -108,44 +109,156 @@ const WebitorData = (function() {
   }
 
   /**
-   * Render repeated content from arrays
+   * Load external data file and cache it
    */
-  function renderRepeatedContent(data) {
-    document.querySelectorAll('[data-repeat]').forEach(container => {
-      const arrayPath = container.getAttribute('data-repeat');
-      const array = getValueByPath(data, arrayPath);
+  async function loadExternalData(dataFile) {
+    // Return from cache if already loaded
+    if (externalDataCache[dataFile]) {
+      return externalDataCache[dataFile];
+    }
 
-      if (!Array.isArray(array)) {
-        console.warn(`Webitor: ${arrayPath} is not an array`);
-        return;
-      }
-
-      const template = container.querySelector('template[data-template]');
-      if (!template) {
-        console.warn(`Webitor: No template found for ${arrayPath}`);
-        return;
-      }
-
-      // Clear existing content (except template)
-      Array.from(container.children).forEach(child => {
-        if (child !== template) {
-          child.remove();
+    try {
+      const cacheBuster = `?_=${Date.now()}`;
+      const response = await fetch(dataFile + cacheBuster, {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
         }
       });
 
-      // Render each item
-      array.forEach((item, index) => {
-        const clone = template.content.cloneNode(true);
+      if (!response.ok) {
+        throw new Error(`Failed to load external data file: ${dataFile}`);
+      }
 
-        // Apply data bindings to cloned content
-        applyBindingsToClone(clone, item, `${arrayPath}[${index}]`);
+      const data = await response.json();
+      externalDataCache[dataFile] = data;
+      console.log(`Webitor: Loaded external data from ${dataFile}`);
+      return data;
+    } catch (error) {
+      console.error(`Webitor: Error loading external data from ${dataFile}:`, error);
+      return null;
+    }
+  }
 
-        // Insert before template
-        container.insertBefore(clone, template);
-      });
-
-      console.log(`Webitor: Rendered ${array.length} items for ${arrayPath}`);
+  /**
+   * Render repeated content from arrays
+   */
+  function renderRepeatedContent(data) {
+    // First handle containers with data-source (external data)
+    document.querySelectorAll('[data-source]').forEach(container => {
+      renderExternalSourceContainer(container);
     });
+
+    // Then handle regular data-repeat containers (local data)
+    document.querySelectorAll('[data-repeat]:not([data-source])').forEach(container => {
+      renderRepeatContainer(container, data);
+    });
+  }
+
+  /**
+   * Render a container with external data source
+   */
+  async function renderExternalSourceContainer(container) {
+    const sourceAttr = container.getAttribute('data-source');
+    const [dataFile, dataPath] = sourceAttr.split(':');
+
+    if (!dataFile || !dataPath) {
+      console.warn(`Webitor: Invalid data-source format: ${sourceAttr}. Expected "filename.json:path.to.data"`);
+      return;
+    }
+
+    const externalData = await loadExternalData(dataFile);
+    if (!externalData) {
+      return;
+    }
+
+    let array = getValueByPath(externalData.data, dataPath);
+
+    if (!Array.isArray(array)) {
+      console.warn(`Webitor: ${dataPath} is not an array in ${dataFile}`);
+      return;
+    }
+
+    // Apply data-limit if specified
+    const limit = container.getAttribute('data-limit');
+    if (limit) {
+      const limitNum = parseInt(limit, 10);
+      if (!isNaN(limitNum) && limitNum > 0) {
+        array = array.slice(0, limitNum);
+      }
+    }
+
+    const template = container.querySelector('template[data-template]');
+    if (!template) {
+      console.warn(`Webitor: No template found for data-source ${sourceAttr}`);
+      return;
+    }
+
+    // Clear existing content (except template)
+    Array.from(container.children).forEach(child => {
+      if (child !== template) {
+        child.remove();
+      }
+    });
+
+    // Render each item
+    array.forEach((item, index) => {
+      const clone = template.content.cloneNode(true);
+      applyBindingsToClone(clone, item, `${dataPath}[${index}]`);
+      container.insertBefore(clone, template);
+    });
+
+    console.log(`Webitor: Rendered ${array.length} items from external source ${sourceAttr}`);
+  }
+
+  /**
+   * Render a regular repeat container with local data
+   */
+  function renderRepeatContainer(container, data) {
+    const arrayPath = container.getAttribute('data-repeat');
+    let array = getValueByPath(data, arrayPath);
+
+    if (!Array.isArray(array)) {
+      console.warn(`Webitor: ${arrayPath} is not an array`);
+      return;
+    }
+
+    // Apply data-limit if specified
+    const limit = container.getAttribute('data-limit');
+    if (limit) {
+      const limitNum = parseInt(limit, 10);
+      if (!isNaN(limitNum) && limitNum > 0) {
+        array = array.slice(0, limitNum);
+      }
+    }
+
+    const template = container.querySelector('template[data-template]');
+    if (!template) {
+      console.warn(`Webitor: No template found for ${arrayPath}`);
+      return;
+    }
+
+    // Clear existing content (except template)
+    Array.from(container.children).forEach(child => {
+      if (child !== template) {
+        child.remove();
+      }
+    });
+
+    // Render each item
+    array.forEach((item, index) => {
+      const clone = template.content.cloneNode(true);
+
+      // Apply data bindings to cloned content
+      applyBindingsToClone(clone, item, `${arrayPath}[${index}]`);
+
+      // Insert before template
+      container.insertBefore(clone, template);
+    });
+
+    console.log(`Webitor: Rendered ${array.length} items for ${arrayPath}`);
   }
 
   /**

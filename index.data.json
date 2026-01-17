@@ -81,35 +81,6 @@
     ],
     "news_preview": {
       "heading": "Latest News & Events",
-      "articles": [
-        {
-          "id": "news-1",
-          "image": "images/christmas-play.jpg",
-          "image_alt": "Christmas nativity performance",
-          "date": "15 December 2025",
-          "title": "Christmas Nativity Success",
-          "excerpt": "Our Year 2 pupils delighted audiences with their wonderful nativity performance.",
-          "link": "news.html"
-        },
-        {
-          "id": "news-2",
-          "image": "images/sports-day.jpg",
-          "image_alt": "Sports day activities",
-          "date": "10 December 2025",
-          "title": "Winter Sports Festival",
-          "excerpt": "Fantastic effort from all year groups at our annual winter sports festival.",
-          "link": "news.html"
-        },
-        {
-          "id": "news-3",
-          "image": "images/reading-award.jpg",
-          "image_alt": "Students with reading awards",
-          "date": "5 December 2025",
-          "title": "Reading Champions",
-          "excerpt": "Celebrating our pupils who have achieved their reading milestones.",
-          "link": "news.html"
-        }
-      ],
       "view_all_text": "View All News",
       "view_all_link": "news.html"
     },
