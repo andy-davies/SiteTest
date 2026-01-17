@@ -1,161 +1,170 @@
 {
-  "version": "1.0",
-  "page": "news",
   "data": {
-    "header": {
-      "title": "Webitor Primary School",
-      "tagline": "Inspiring Young Minds"
+    "footer": {
+      "contact_info": {
+        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm",
+        "heading": "Contact Us"
+      },
+      "copyright": "© 2026 Webitor Primary School. All rights reserved.",
+      "school_info": {
+        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom",
+        "heading": "Webitor Primary School"
+      }
     },
-    "page_header": {
-      "title": "News & Events",
-      "subtitle": "Latest updates from our school community"
+    "header": {
+      "tagline": "Inspiring Young Minds",
+      "title": "Webitor Primary School"
     },
     "latest_news": {
-      "heading": "Latest News",
       "articles": [
         {
-          "id": "article-1",
-          "date": "15 December 2025",
-          "title": "Christmas Nativity Performances Delight Audiences",
-          "image": "images/christmas-play.jpg",
-          "image_alt": "Christmas nativity performance",
-          "excerpt": "Our Year 1 and Year 2 pupils delighted audiences with their wonderful nativity performance.",
-          "link": "news.html#article-1",
+          "content": [
+            "New content paragraph"
+          ],
+          "date": "New date",
+          "id": "article-mkionx46-emsbs",
+          "image": "images/placeholder.jpg",
+          "title": "New title"
+        },
+        {
           "content": [
             "Our Year 1 and Year 2 pupils have been busy performing their wonderful Christmas nativity play \"The Inn-spectors\" to packed audiences this week. The children sang beautifully and acted with confidence, bringing the Christmas story to life in a fresh and entertaining way.",
             "Special thanks to Mrs Davies and the Year 1/2 team for their hard work in preparing the children, and to our PTA for creating stunning costumes. We're incredibly proud of all our young performers!",
             "Parents can access photos from the performances via our secure online gallery (login details sent via email)."
-          ]
+          ],
+          "date": "15 December 2025",
+          "excerpt": "Our Year 1 and Year 2 pupils delighted audiences with their wonderful nativity performance.",
+          "id": "article-1",
+          "image": "images/christmas-play.jpg",
+          "image_alt": "Christmas nativity performance",
+          "link": "news.html#article-1",
+          "title": "Christmas Nativity Performances Delight Audiences"
         },
         {
-          "id": "article-2",
-          "date": "10 December 2025",
-          "title": "Winter Sports Festival Success",
-          "image": "images/sports-day.jpg",
-          "image_alt": "Sports day activities",
-          "excerpt": "Fantastic effort from all year groups at our annual winter sports festival.",
-          "link": "news.html#article-2",
           "content": [
             "Despite the chilly weather, spirits were high at our annual Winter Sports Festival on Friday. All year groups participated in a range of activities including relay races, obstacle courses, and team challenges.",
             "Congratulations to Red House for winning the overall trophy! However, the real winners were all our children who demonstrated excellent sportsmanship, teamwork, and resilience throughout the day.",
             "Thank you to all the parent volunteers who helped supervise activities and to Mr Wilson for organizing such a fantastic event."
-          ]
+          ],
+          "date": "10 December 2025",
+          "excerpt": "Fantastic effort from all year groups at our annual winter sports festival.",
+          "id": "article-2",
+          "image": "images/sports-day.jpg",
+          "image_alt": "Sports day activities",
+          "link": "news.html#article-2",
+          "title": "Winter Sports Festival Success"
         },
         {
-          "id": "article-3",
-          "date": "5 December 2025",
-          "title": "Celebrating Our Reading Champions",
-          "image": "images/reading-award.jpg",
-          "image_alt": "Students with reading awards",
-          "excerpt": "Celebrating our pupils who have achieved their reading milestones.",
-          "link": "news.html#article-3",
           "content": [
             "This week we celebrated the achievement of 47 children who have reached their Bronze, Silver, or Gold reading awards. These awards recognize children who read regularly at home and complete reading challenges.",
             "Particular congratulations go to Amelia (Year 4), James (Year 5), and Sofia (Year 6) who have achieved their Gold awards - that's over 150 books read this year!",
             "Reading for pleasure is one of the most important things children can do to support their education. Well done to all our reading champions and thank you to parents for supporting reading at home."
-          ]
+          ],
+          "date": "5 December 2025",
+          "excerpt": "Celebrating our pupils who have achieved their reading milestones.",
+          "id": "article-3",
+          "image": "images/reading-award.jpg",
+          "image_alt": "Students with reading awards",
+          "link": "news.html#article-3",
+          "title": "Celebrating Our Reading Champions"
         },
         {
-          "id": "article-4",
-          "date": "28 November 2025",
-          "title": "Bestselling Author Visits Webitor Primary",
-          "image": "images/author-visit.jpg",
-          "image_alt": "Author talking to children",
-          "excerpt": "Children's author Sam Cooper inspired our pupils with creative writing workshops.",
-          "link": "news.html#article-4",
           "content": [
             "We were thrilled to welcome children's author Sam Cooper to our school last week. Sam, who writes the popular \"Mystery Cats\" series, spent the day working with our pupils on creative writing.",
             "Children in Years 3-6 attended workshops where they learned about character development, plot structure, and illustration. Sam also read from her latest book and answered questions about being an author.",
             "The day inspired many budding writers - our teachers report that creative writing books have been flying off the library shelves ever since!"
-          ]
+          ],
+          "date": "28 November 2025",
+          "excerpt": "Children's author Sam Cooper inspired our pupils with creative writing workshops.",
+          "id": "article-4",
+          "image": "images/author-visit.jpg",
+          "image_alt": "Author talking to children",
+          "link": "news.html#article-4",
+          "title": "Bestselling Author Visits Webitor Primary"
         },
         {
-          "id": "article-5",
-          "date": "11 November 2025",
-          "title": "School Remembers on Armistice Day",
-          "image": "images/remembrance.jpg",
-          "image_alt": "Remembrance service",
-          "excerpt": "Our whole school came together for a moving Remembrance Service.",
-          "link": "news.html#article-5",
           "content": [
             "Our whole school came together for a moving Remembrance Service on Monday. Year 6 pupils led the assembly, sharing poems and information about why we remember those who have served in conflicts.",
             "At 11am, the entire school observed a two-minute silence to honor those who sacrificed their lives. Children have also been learning about WW1 and WW2 in their history lessons this term.",
             "Thank you to local veteran Mr Arthur Harris who joined us for the assembly and shared his experiences with our Year 6 pupils."
-          ]
+          ],
+          "date": "11 November 2025",
+          "excerpt": "Our whole school came together for a moving Remembrance Service.",
+          "id": "article-5",
+          "image": "images/remembrance.jpg",
+          "image_alt": "Remembrance service",
+          "link": "news.html#article-5",
+          "title": "School Remembers on Armistice Day"
         },
         {
-          "id": "article-6",
-          "date": "4 November 2025",
-          "title": "Exciting Experiments During Science Week",
-          "image": "images/science-week.jpg",
-          "image_alt": "Science experiments",
-          "excerpt": "Science Week was a huge success with exciting hands-on investigations.",
-          "link": "news.html#article-6",
           "content": [
             "Science Week was a huge success with every class carrying out exciting investigations. From making volcanoes erupt in Year 3 to dissecting flowers in Year 5, our budding scientists explored various scientific concepts hands-on.",
             "The week culminated in our Science Fair on Friday, where children presented their projects to parents and peers. The standard of work was exceptional, with creative displays demonstrating learning about space, electricity, animals, and more.",
             "Special thanks to Dr. Patel (parent and local GP) and Professor Chang (parent and university lecturer) for running STEM workshops with our Year 6 pupils."
-          ]
+          ],
+          "date": "4 November 2025",
+          "excerpt": "Science Week was a huge success with exciting hands-on investigations.",
+          "id": "article-6",
+          "image": "images/science-week.jpg",
+          "image_alt": "Science experiments",
+          "link": "news.html#article-6",
+          "title": "Exciting Experiments During Science Week"
         }
-      ]
+      ],
+      "heading": "Latest News"
+    },
+    "page_header": {
+      "subtitle": "Latest updates from our school community",
+      "title": "News & Events"
     },
     "upcoming_events": {
-      "heading": "Upcoming Events",
       "events": [
         {
+          "day": "6",
+          "description": "Welcome back! School reopens for all pupils.",
           "id": "event-1",
           "month": "JAN",
-          "day": "6",
-          "title": "Spring Term Begins",
-          "description": "Welcome back! School reopens for all pupils."
+          "title": "Spring Term Begins"
         },
         {
+          "day": "25",
+          "description": "10:00am - 2:00pm. Tours, meet the teachers, see our facilities.",
           "id": "event-2",
           "month": "JAN",
-          "day": "25",
-          "title": "Open Day for Prospective Parents",
-          "description": "10:00am - 2:00pm. Tours, meet the teachers, see our facilities."
+          "title": "Open Day for Prospective Parents"
         },
         {
+          "day": "6",
+          "description": "Special assemblies and workshops on online safety.",
           "id": "event-3",
           "month": "FEB",
-          "day": "6",
-          "title": "Safer Internet Day",
-          "description": "Special assemblies and workshops on online safety."
+          "title": "Safer Internet Day"
         },
         {
+          "day": "14",
+          "description": "13th & 14th February, 3:30-7:00pm. Appointments via the school app.",
           "id": "event-4",
           "month": "FEB",
-          "day": "14",
-          "title": "Parent Consultation Evenings",
-          "description": "13th & 14th February, 3:30-7:00pm. Appointments via the school app."
+          "title": "Parent Consultation Evenings"
         },
         {
+          "day": "7",
+          "description": "Dress as your favorite book character! Author workshops and book swap.",
           "id": "event-5",
           "month": "MAR",
-          "day": "7",
-          "title": "World Book Day",
-          "description": "Dress as your favorite book character! Author workshops and book swap."
+          "title": "World Book Day"
         },
         {
+          "day": "21",
+          "description": "6:00pm in the school hall. All families welcome.",
           "id": "event-6",
           "month": "MAR",
-          "day": "21",
-          "title": "Spring Concert",
-          "description": "6:00pm in the school hall. All families welcome."
+          "title": "Spring Concert"
         }
-      ]
-    },
-    "footer": {
-      "school_info": {
-        "heading": "Webitor Primary School",
-        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
-      },
-      "contact_info": {
-        "heading": "Contact Us",
-        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
-      },
-      "copyright": "© 2026 Webitor Primary School. All rights reserved."
+      ],
+      "heading": "Upcoming Events"
     }
-  }
+  },
+  "page": "news",
+  "version": "1.0"
 }
