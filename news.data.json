@@ -1,25 +1,8 @@
 {
   "data": {
-<<<<<<< Updated upstream
-    "footer": {
-      "contact_info": {
-        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm",
-        "heading": "Contact Us"
-      },
-      "copyright": "© 2026 Webitor Primary School. All rights reserved.",
-      "school_info": {
-        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom",
-        "heading": "Webitor Primary School"
-      }
-    },
-    "header": {
-      "tagline": "Inspiring Young Minds",
-      "title": "Webitor Primary School"
-=======
     "page_header": {
       "title": "News & Events",
       "subtitle": "Latest updates from our school community"
->>>>>>> Stashed changes
     },
     "latest_news": {
       "articles": [
@@ -119,10 +102,6 @@
       ],
       "heading": "Latest News"
     },
-    "page_header": {
-      "subtitle": "Latest updates from our school community",
-      "title": "News & Events"
-    },
     "upcoming_events": {
       "events": [
         {
@@ -167,12 +146,8 @@
           "month": "MAR",
           "title": "Spring Concert"
         }
-<<<<<<< Updated upstream
       ],
       "heading": "Upcoming Events"
-=======
-      ]
->>>>>>> Stashed changes
     }
   },
   "page": "news",
