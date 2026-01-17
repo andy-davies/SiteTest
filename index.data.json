@@ -42,7 +42,7 @@
     "footer": {
       "contact_info": {
         "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm",
-        "heading": "Contact Us"
+        "heading": "Contact"
       },
       "copyright": "© 2026 Webitor Primary School. All rights reserved.",
       "school_info": {
@@ -90,7 +90,7 @@
           "title": "Reading Champions"
         }
       ],
-      "heading": "Latest News & Events",
+      "heading": "Latest News",
       "view_all_link": "news.html",
       "view_all_text": "View All News"
     },
@@ -106,7 +106,7 @@
         "title": "Parent Hub"
       },
       {
-        "description": "Discover our approach to teaching and learning",
+        "description": "Discover our approach to teaching and learning over the course of your young persons early years",
         "link": "curriculum.html",
         "title": "Our Curriculum"
       }
