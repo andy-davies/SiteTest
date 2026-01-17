@@ -340,6 +340,31 @@ const WebitorData = (function() {
   }
 
   /**
+   * Add a new item to an array at the beginning and re-render
+   */
+  function addArrayItem(path, newItem) {
+    console.log(`Webitor: Adding new item to array at ${path}`, newItem);
+
+    // Get current array
+    const currentArray = getValueByPath(currentData.data, path);
+    if (!Array.isArray(currentArray)) {
+      throw new Error(`Path ${path} is not an array`);
+    }
+
+    // Add new item at the beginning
+    currentArray.unshift(newItem);
+
+    // Re-render the affected repeat container
+    const container = document.querySelector(`[data-repeat="${path}"]`);
+    if (container) {
+      renderSingleRepeatContainer(container, currentData.data);
+      console.log(`Webitor: Re-rendered array container after adding item to ${path}`);
+    } else {
+      console.warn(`Webitor: Could not find container for array path: ${path}`);
+    }
+  }
+
+  /**
    * Render a single repeat container (used for array updates)
    */
   function renderSingleRepeatContainer(container, data) {
@@ -440,6 +465,7 @@ const WebitorData = (function() {
     disableEditing: disableEditing,
     updateValue: updateValue,
     getData: getData,
-    updateArray: updateArray
+    updateArray: updateArray,
+    addArrayItem: addArrayItem
   };
 })();
