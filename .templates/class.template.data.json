@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "page": "{{PAGE_ID}}",
+  "template": "class",
+  "data": {
+    "page_header": {
+      "title": "{{PAGE_TITLE}}",
+      "subtitle": "Welcome to our class"
+    },
+    "teacher": {
+      "heading": "Our Class Teacher",
+      "name": "Teacher Name",
+      "role": "Class Teacher",
+      "bio": "Enter teacher biography and information here.",
+      "image": "images/placeholder-teacher.jpg"
+    },
+    "about": {
+      "heading": "About Our Class",
+      "paragraphs": [
+        "Enter information about the class here. Describe the learning environment and what makes your class special.",
+        "Add another paragraph with more details about class activities, routines, or achievements."
+      ]
+    },
+    "curriculum": {
+      "heading": "What We Learn",
+      "subjects": [
+        {
+          "title": "English",
+          "description": "Reading, writing, and communication skills."
+        },
+        {
+          "title": "Mathematics",
+          "description": "Numbers, problem-solving, and mathematical concepts."
+        },
+        {
+          "title": "Science",
+          "description": "Exploring the world through investigation and experiments."
+        },
+        {
+          "title": "Creative Arts",
+          "description": "Art, music, and creative expression."
+        }
+      ]
+    }
+  }
+}

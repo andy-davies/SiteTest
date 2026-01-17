@@ -1,0 +1,18 @@
+{
+  "templates": [
+    {
+      "id": "class",
+      "name": "Class Page",
+      "description": "School class with teacher and curriculum",
+      "htmlFile": "class.template.html",
+      "dataFile": "class.template.data.json"
+    },
+    {
+      "id": "teacher",
+      "name": "Teacher Profile",
+      "description": "Staff profile page",
+      "htmlFile": "teacher.template.html",
+      "dataFile": "teacher.template.data.json"
+    }
+  ]
+}

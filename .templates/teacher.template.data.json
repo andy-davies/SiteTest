@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "page": "{{PAGE_ID}}",
+  "template": "teacher",
+  "data": {
+    "page_header": {
+      "title": "{{PAGE_TITLE}}",
+      "subtitle": "Staff Profile"
+    },
+    "profile": {
+      "name": "Teacher Name",
+      "role": "Position / Subject",
+      "email": "teacher@school.edu",
+      "image": "images/placeholder-teacher.jpg"
+    },
+    "biography": {
+      "heading": "About Me",
+      "paragraphs": [
+        "Enter biography paragraph one here. Share your teaching philosophy and what inspires you as an educator.",
+        "Enter biography paragraph two here. Include information about your experience and interests."
+      ]
+    },
+    "qualifications": {
+      "heading": "Qualifications & Experience",
+      "items": [
+        { "text": "Bachelor of Education" },
+        { "text": "5+ years teaching experience" },
+        { "text": "Specialist in curriculum area" },
+        { "text": "Additional qualification or achievement" }
+      ]
+    }
+  }
+}

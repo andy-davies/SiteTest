@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-bind="page_header.title">{{PAGE_TITLE}} - Webitor Primary School</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="webitor-header"></header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-bind="page_header.title"></h1>
+            <p data-bind="page_header.subtitle"></p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2 data-bind="teacher.heading"></h2>
+                    <p><strong data-bind="teacher.name"></strong></p>
+                    <p class="staff-role" data-bind="teacher.role"></p>
+                    <p data-bind="teacher.bio"></p>
+                </div>
+                <div class="content-image">
+                    <img data-bind-src="teacher.image" alt="Class teacher">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2 data-bind="about.heading"></h2>
+            <p data-bind="about.paragraphs.0"></p>
+            <p data-bind="about.paragraphs.1"></p>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2 data-bind="curriculum.heading"></h2>
+            <div class="values-grid" data-repeat="curriculum.subjects" data-array-editable="true">
+                <template data-template="subject">
+                    <div class="value-card">
+                        <h3 data-bind="title"></h3>
+                        <p data-bind="description"></p>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <footer id="webitor-footer"></footer>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/webitor-data.js"></script>
+    <script>
+        WebitorData.init('{{DATA_FILE}}');
+    </script>
+</body>
+</html>
