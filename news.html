@@ -40,7 +40,7 @@
         <div class="container">
             <h2 data-bind="latest_news.heading"></h2>
 
-            <div data-repeat="latest_news.articles">
+            <div data-repeat="latest_news.articles" data-array-editable="true">
                 <template data-template="article">
                     <article class="news-article" data-id-bind="id">
                         <div class="article-header">
@@ -60,7 +60,7 @@
     <section class="content-section alt-bg">
         <div class="container">
             <h2 data-bind="upcoming_events.heading"></h2>
-            <div class="events-calendar" data-repeat="upcoming_events.events">
+            <div class="events-calendar" data-repeat="upcoming_events.events" data-array-editable="true">
                 <template data-template="event">
                     <div class="event-item" data-id-bind="id">
                         <div class="event-date">

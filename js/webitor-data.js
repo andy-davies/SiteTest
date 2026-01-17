@@ -314,6 +314,73 @@ const WebitorData = (function() {
   }
 
   /**
+   * Get current data object for external access
+   */
+  function getData() {
+    return currentData;
+  }
+
+  /**
+   * Update an entire array and re-render the affected container
+   */
+  function updateArray(path, newArray) {
+    console.log(`Webitor: Updating array at ${path}`, newArray);
+
+    // Update the data model
+    setValueByPath(currentData.data, path, newArray);
+
+    // Re-render the affected repeat container
+    const container = document.querySelector(`[data-repeat="${path}"]`);
+    if (container) {
+      renderSingleRepeatContainer(container, currentData.data);
+      console.log(`Webitor: Re-rendered array container for ${path}`);
+    } else {
+      console.warn(`Webitor: Could not find container for array path: ${path}`);
+    }
+  }
+
+  /**
+   * Render a single repeat container (used for array updates)
+   */
+  function renderSingleRepeatContainer(container, data) {
+    const arrayPath = container.getAttribute('data-repeat');
+    const array = getValueByPath(data, arrayPath);
+
+    if (!Array.isArray(array)) {
+      console.warn(`Webitor: ${arrayPath} is not an array`);
+      return;
+    }
+
+    const template = container.querySelector('template[data-template]');
+    if (!template) {
+      console.warn(`Webitor: No template found for ${arrayPath}`);
+      return;
+    }
+
+    // Clear existing content (except template and edit button)
+    Array.from(container.children).forEach(child => {
+      if (child !== template && !child.classList?.contains('webitor-array-edit-button')) {
+        child.remove();
+      }
+    });
+
+    // Render each item
+    array.forEach((item, index) => {
+      const clone = template.content.cloneNode(true);
+      applyBindingsToClone(clone, item, `${arrayPath}[${index}]`);
+      container.insertBefore(clone, template);
+    });
+
+    // Re-apply editing mode to new elements if editing is active
+    if (isEditingMode) {
+      container.querySelectorAll('[data-editable="true"]').forEach(element => {
+        element.contentEditable = 'true';
+        element.classList.add('webitor-editable');
+      });
+    }
+  }
+
+  /**
    * Get changes between original and current data
    */
   function getChanges() {
@@ -371,6 +438,8 @@ const WebitorData = (function() {
     getChanges: getChanges,
     enableEditing: enableEditing,
     disableEditing: disableEditing,
-    updateValue: updateValue
+    updateValue: updateValue,
+    getData: getData,
+    updateArray: updateArray
   };
 })();
