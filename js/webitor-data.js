@@ -365,6 +365,35 @@ const WebitorData = (function() {
   }
 
   /**
+   * Remove an item from an array at the specified index and re-render
+   */
+  function removeArrayItem(path, index) {
+    console.log(`Webitor: Removing item from array at ${path}, index ${index}`);
+
+    // Get current array
+    const currentArray = getValueByPath(currentData.data, path);
+    if (!Array.isArray(currentArray)) {
+      throw new Error(`Path ${path} is not an array`);
+    }
+
+    if (index < 0 || index >= currentArray.length) {
+      throw new Error(`Index ${index} is out of bounds for array at ${path}`);
+    }
+
+    // Remove the item
+    currentArray.splice(index, 1);
+
+    // Re-render the affected repeat container
+    const container = document.querySelector(`[data-repeat="${path}"]`);
+    if (container) {
+      renderSingleRepeatContainer(container, currentData.data);
+      console.log(`Webitor: Re-rendered array container after removing item from ${path}`);
+    } else {
+      console.warn(`Webitor: Could not find container for array path: ${path}`);
+    }
+  }
+
+  /**
    * Render a single repeat container (used for array updates)
    */
   function renderSingleRepeatContainer(container, data) {
@@ -466,6 +495,7 @@ const WebitorData = (function() {
     updateValue: updateValue,
     getData: getData,
     updateArray: updateArray,
-    addArrayItem: addArrayItem
+    addArrayItem: addArrayItem,
+    removeArrayItem: removeArrayItem
   };
 })();
