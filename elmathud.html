@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-bind="page_header.title">{{PAGE_TITLE}} - Webitor Primary School</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="webitor-header"></header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-bind="page_header.title"></h1>
+            <p data-bind="page_header.subtitle"></p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-image">
+                    <img data-bind-src="profile.image" alt="Staff photo" class="staff-image-large">
+                </div>
+                <div class="content-text">
+                    <h2 data-bind="profile.name"></h2>
+                    <p class="staff-role" data-bind="profile.role"></p>
+                    <p data-bind="profile.email"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2 data-bind="biography.heading"></h2>
+            <p data-bind="biography.paragraphs.0"></p>
+            <p data-bind="biography.paragraphs.1"></p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 data-bind="qualifications.heading"></h2>
+            <div class="values-grid" data-repeat="qualifications.items" data-array-editable="true">
+                <template data-template="qualification">
+                    <div class="value-card">
+                        <p data-bind="text"></p>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <footer id="webitor-footer"></footer>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/webitor-data.js"></script>
+    <script>
+        WebitorData.init('elmathud.data.json');
+    </script>
+</body>
+</html>
