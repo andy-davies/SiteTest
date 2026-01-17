@@ -94,9 +94,13 @@ const WebitorData = (function() {
     // Handle src bindings
     document.querySelectorAll('[data-bind-src]').forEach(element => {
       const path = element.getAttribute('data-bind-src');
+      const fullPath = prefix ? `${prefix}.${path}` : path;
       const value = getValueByPath(data, path);
       if (value !== undefined) {
         element.src = value;
+        // Mark images as editable for the Webitor extension
+        element.setAttribute('data-editable-image', 'true');
+        element.setAttribute('data-path', fullPath);
       }
     });
   }
