@@ -1,24 +1,52 @@
 {
-  "version": "1.0",
   "component": "header",
   "data": {
-    "title": "Webitor Primary School",
-    "tagline": "Inspiring Young Minds",
     "navigation": [
-      { "id": "home", "label": "Home", "href": "index.html" },
       {
-        "id": "our-school",
-        "label": "Our School",
-        "href": "#",
+        "href": "index.html",
+        "id": "home",
+        "label": "Home"
+      },
+      {
         "children": [
-          { "id": "about", "label": "About Us", "href": "about.html" },
-          { "id": "curriculum", "label": "Curriculum", "href": "curriculum.html" },
-          { "id": "admissions", "label": "Admissions", "href": "admissions.html" },
-          { "id": "parents", "label": "Parents", "href": "parents.html" },
-          { "id": "news", "label": "News", "href": "news.html" },
-          { "id": "contact", "label": "Contact", "href": "contact.html" }
-        ]
+          {
+            "href": "about.html",
+            "id": "about",
+            "label": "About Us"
+          },
+          {
+            "href": "curriculum.html",
+            "id": "curriculum",
+            "label": "Curriculum"
+          },
+          {
+            "href": "admissions.html",
+            "id": "admissions",
+            "label": "Admissions"
+          },
+          {
+            "href": "parents.html",
+            "id": "parents",
+            "label": "Parents"
+          },
+          {
+            "href": "news.html",
+            "id": "news",
+            "label": "News"
+          },
+          {
+            "href": "contact.html",
+            "id": "contact",
+            "label": "Contact"
+          }
+        ],
+        "href": "#",
+        "id": "our-school",
+        "label": "Our School"
       }
-    ]
-  }
+    ],
+    "tagline": "Inspiring Young Minds Everyday",
+    "title": "Webitor Primary School"
+  },
+  "version": "1.0"
 }
