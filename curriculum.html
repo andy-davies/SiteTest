@@ -7,27 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1 data-bind="header.title"></h1>
-                    <p class="tagline" data-bind="header.tagline"></p>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="curriculum.html" class="active">Curriculum</a></li>
-                        <li><a href="admissions.html">Admissions</a></li>
-                        <li><a href="parents.html">Parents</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <header id="webitor-header"></header>
 
     <section class="page-header">
         <div class="container">
@@ -124,42 +104,10 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4 data-bind="footer.school_info.heading"></h4>
-                    <p data-bind="footer.school_info.address"></p>
-                </div>
-                <div class="footer-section">
-                    <h4 data-bind="footer.contact_info.heading"></h4>
-                    <p data-bind="footer.contact_info.details"></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="admissions.html">Admissions</a></li>
-                        <li><a href="parents.html">Parent Hub</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Policies</h4>
-                    <ul>
-                        <li><a href="#">Safeguarding</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Accessibility</a></li>
-                        <li><a href="#">Complaints</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-bind="footer.copyright"></p>
-            </div>
-        </div>
-    </footer>
+    <footer id="webitor-footer"></footer>
 
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/webitor-data.js"></script>
     <script>WebitorData.init('curriculum.data.json');</script>
 </body>

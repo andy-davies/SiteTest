@@ -1,5 +1,6 @@
 {
   "data": {
+<<<<<<< Updated upstream
     "footer": {
       "contact_info": {
         "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm",
@@ -14,6 +15,11 @@
     "header": {
       "tagline": "Inspiring Young Minds",
       "title": "Webitor Primary School"
+=======
+    "page_header": {
+      "title": "News & Events",
+      "subtitle": "Latest updates from our school community"
+>>>>>>> Stashed changes
     },
     "latest_news": {
       "articles": [
@@ -161,8 +167,12 @@
           "month": "MAR",
           "title": "Spring Concert"
         }
+<<<<<<< Updated upstream
       ],
       "heading": "Upcoming Events"
+=======
+      ]
+>>>>>>> Stashed changes
     }
   },
   "page": "news",

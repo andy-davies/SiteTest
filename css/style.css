@@ -106,6 +106,145 @@ nav a.active {
 }
 
 /* ===================================
+   Dropdown Menu Styles
+   =================================== */
+
+/* Nav item positioning context */
+nav ul > li.nav-item {
+    position: relative;
+}
+
+/* Dropdown trigger indicator */
+nav ul > li.has-dropdown > a::after {
+    content: '\25BC';
+    font-size: 0.6em;
+    margin-left: 0.4em;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+}
+
+nav ul > li.has-dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+/* Dropdown menu container */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 180px;
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-lg);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0.5rem;
+    list-style: none;
+}
+
+/* Triangle pointer at top of dropdown */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--bg-white);
+}
+
+/* Show dropdown on hover and focus */
+nav ul > li.has-dropdown:hover .dropdown-menu,
+nav ul > li.has-dropdown:focus-within .dropdown-menu,
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown menu items */
+.dropdown-menu li {
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+}
+
+.dropdown-menu a.active {
+    color: var(--primary-color);
+    background-color: var(--bg-light);
+}
+
+/* Responsive dropdown for mobile */
+@media (max-width: 768px) {
+    /* Convert dropdown to expandable on mobile */
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        background-color: var(--bg-light);
+        border-radius: 0;
+        max-height: 0;
+        overflow: hidden;
+        margin-top: 0;
+        padding: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+        width: 100%;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    nav ul > li.has-dropdown:hover .dropdown-menu,
+    nav ul > li.has-dropdown:focus-within .dropdown-menu,
+    .dropdown-menu.show {
+        max-height: 500px;
+        padding: 0.5rem 0;
+        transform: none;
+    }
+
+    .dropdown-menu a {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust arrow for mobile */
+    nav ul > li.has-dropdown > a::after {
+        content: '+';
+        font-size: 1em;
+    }
+
+    nav ul > li.has-dropdown:hover > a::after,
+    nav ul > li.has-dropdown:focus-within > a::after {
+        content: '-';
+        transform: none;
+    }
+}
+
+/* ===================================
    Hero Section
    =================================== */
 

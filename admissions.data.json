@@ -2,10 +2,6 @@
   "version": "1.0",
   "page": "admissions",
   "data": {
-    "header": {
-      "title": "Webitor Primary School",
-      "tagline": "Inspiring Young Minds"
-    },
     "page_header": {
       "title": "Admissions",
       "subtitle": "Join our thriving school community"
@@ -159,17 +155,6 @@
           "answer": "Please inform us of any SEND requirements on your application. Our SENCO will arrange to meet you to discuss how we can best support your child."
         }
       ]
-    },
-    "footer": {
-      "school_info": {
-        "heading": "Webitor Primary School",
-        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
-      },
-      "contact_info": {
-        "heading": "Contact Us",
-        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
-      },
-      "copyright": "© 2026 Webitor Primary School. All rights reserved."
     }
   }
 }

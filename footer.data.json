@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "component": "footer",
+  "data": {
+    "school_info": {
+      "heading": "Webitor Primary School",
+      "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
+    },
+    "contact_info": {
+      "heading": "Contact Us",
+      "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
+    },
+    "quick_links": {
+      "heading": "Quick Links",
+      "links": [
+        { "label": "About Us", "href": "about.html" },
+        { "label": "Admissions", "href": "admissions.html" },
+        { "label": "Parent Hub", "href": "parents.html" },
+        { "label": "Contact", "href": "contact.html" }
+      ]
+    },
+    "policies": {
+      "heading": "Policies",
+      "links": [
+        { "label": "Safeguarding", "href": "#" },
+        { "label": "Privacy Policy", "href": "#" },
+        { "label": "Accessibility", "href": "#" },
+        { "label": "Complaints", "href": "#" }
+      ]
+    },
+    "copyright": "\u00a9 2026 Webitor Primary School. All rights reserved."
+  }
+}

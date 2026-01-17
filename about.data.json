@@ -2,10 +2,6 @@
   "version": "1.0",
   "page": "about",
   "data": {
-    "header": {
-      "title": "Webitor Primary School",
-      "tagline": "Inspiring Young Minds"
-    },
     "page_header": {
       "title": "About Webitor Primary",
       "subtitle": "Discover our vision, values, and community"
@@ -98,17 +94,6 @@
         "Our Designated Safeguarding Lead is Mrs Sarah Thompson (Headteacher), and our Deputy Safeguarding Lead is Mr James Wilson (Deputy Headteacher).",
         "If you have any concerns about a child's welfare, please contact the school office immediately on 020 1234 5678."
       ]
-    },
-    "footer": {
-      "school_info": {
-        "heading": "Webitor Primary School",
-        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
-      },
-      "contact_info": {
-        "heading": "Contact Us",
-        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
-      },
-      "copyright": "© 2026 Webitor Primary School. All rights reserved."
     }
   }
 }

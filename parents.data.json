@@ -2,10 +2,6 @@
   "version": "1.0",
   "page": "parents",
   "data": {
-    "header": {
-      "title": "Webitor Primary School",
-      "tagline": "Inspiring Young Minds"
-    },
     "page_header": {
       "title": "Parent Hub",
       "subtitle": "Essential information for parents and carers"
@@ -175,17 +171,6 @@
         "Attendance Policy",
         "Complaints Procedure"
       ]
-    },
-    "footer": {
-      "school_info": {
-        "heading": "Webitor Primary School",
-        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
-      },
-      "contact_info": {
-        "heading": "Contact Us",
-        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
-      },
-      "copyright": "© 2026 Webitor Primary School. All rights reserved."
     }
   }
 }
