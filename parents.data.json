@@ -1,126 +1,120 @@
 {
-  "version": "1.0",
-  "page": "parents",
   "data": {
-    "header": {
-      "title": "Webitor Primary School",
-      "tagline": "Inspiring Young Minds"
-    },
-    "page_header": {
-      "title": "Parent Hub",
-      "subtitle": "Essential information for parents and carers"
-    },
-    "term_dates": {
-      "heading": "Term Dates 2025-26",
-      "terms": [
+    "communication": {
+      "heading": "Communication",
+      "methods": [
         {
-          "name": "Spring Term 2026",
-          "start": "Monday 6th January 2026",
-          "half_term": "17th-21st February 2026",
-          "end": "Friday 27th March 2026"
+          "description": "Download our school app for instant updates, news, and the ability to report absences.",
+          "icon": "📱",
+          "title": "School App"
         },
         {
-          "name": "Summer Term 2026",
-          "start": "Monday 13th April 2026",
-          "half_term": "25th-29th May 2026",
-          "end": "Friday 17th July 2026"
+          "description": "Sent every Friday via email and available on our website.",
+          "icon": "📧",
+          "title": "Weekly Newsletter"
         },
         {
-          "name": "Autumn Term 2026",
-          "start": "Monday 7th September 2026",
-          "half_term": "26th-30th October 2026",
-          "end": "Friday 18th December 2026"
+          "description": "Our online learning platform where teachers share work and celebrate achievements.",
+          "icon": "📚",
+          "title": "Seesaw"
+        },
+        {
+          "description": "Termly meetings to discuss your child's progress - dates sent in advance.",
+          "icon": "👥",
+          "title": "Parent Consultations"
         }
-      ],
-      "inset_days": {
-        "heading": "INSET Days (school closed to pupils):",
-        "dates": "5th January 2026, 28th March 2026, 6th July 2026, 17th July 2026, 4th September 2026"
-      }
+      ]
     },
     "daily_routines": {
       "heading": "Daily Routines",
       "routines": [
         {
-          "icon": "⏰",
-          "title": "School Hours",
           "details": "Gates Open: 8:35am\nRegistration: 8:45am\nMorning Session: 8:45am - 12:00pm\nAfternoon Session: 1:00pm - 3:15pm\nCollection: 3:15pm",
-          "note": "Please ensure children arrive by 8:45am. Late arrivals must sign in at the office."
+          "icon": "⏰",
+          "note": "Please ensure children arrive by 8:45am. Late arrivals must sign in at the office.",
+          "title": "School Hours"
         },
         {
-          "icon": "🍎",
-          "title": "Lunchtimes",
-          "intro": "We offer healthy, freshly prepared hot meals daily, plus a vegetarian option and packed lunch alternative.",
           "cost": "Cost: Free for Reception, Year 1 & Year 2\n£2.50 per day for Years 3-6",
-          "note": "Menus are available on our website and sent home weekly."
+          "icon": "🍎",
+          "intro": "We offer healthy, freshly prepared hot meals daily, plus a vegetarian option and packed lunch alternative.",
+          "note": "Menus are available on our website and sent home weekly.",
+          "title": "Lunchtimes"
         },
         {
-          "icon": "👕",
-          "title": "School Uniform",
           "daily": "Daily: Navy blue jumper/cardigan, white polo shirt, grey/black trousers or skirt",
-          "pe": "PE Days: Navy/white PE kit, trainers",
+          "icon": "👕",
+          "note": "Uniform can be purchased from our supplier or any retailer.",
           "optional": "Optional: School tie, navy fleece",
-          "note": "Uniform can be purchased from our supplier or any retailer."
+          "pe": "PE Days: Navy/white PE kit, trainers",
+          "title": "School Uniform"
         },
         {
           "icon": "🌡️",
-          "title": "Attendance",
           "intro": "Excellent attendance is vital for your child's progress. Our target is 96%+.",
+          "note": "Medical appointments should be made outside school hours where possible.",
           "report": "Report Absence: Call the school office before 9:00am on each day of absence.\nTel: 020 1234 5678",
-          "note": "Medical appointments should be made outside school hours where possible."
+          "title": "Attendance"
         }
       ]
     },
-    "wraparound_care": {
-      "heading": "Wraparound Care",
-      "breakfast_club": {
-        "title": "🌅 Breakfast Club",
-        "time": "Time: 7:45am - 8:45am",
-        "cost": "Cost: £4.50 per session",
-        "description": "Includes healthy breakfast and supervised activities."
+    "footer": {
+      "contact_info": {
+        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm",
+        "heading": "Contact Us"
       },
-      "after_school_club": {
-        "title": "🌙 After School Club",
-        "time": "Time: 3:15pm - 6:00pm",
-        "cost": "Cost: £10 per session (3:15-6:00pm)\n£6 per session (3:15-4:30pm)",
-        "description": "Includes snacks, homework support, and enrichment activities."
-      },
-      "booking": "Booking: Must be booked in advance via the school office. Limited spaces available.",
-      "image": "images/after-school-club.jpg",
-      "image_alt": "Children at after school club"
+      "copyright": "© 2026 Webitor Primary School. All rights reserved.",
+      "school_info": {
+        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom",
+        "heading": "Webitor Primary School"
+      }
     },
-    "communication": {
-      "heading": "Communication",
-      "methods": [
+    "header": {
+      "tagline": "Inspiring Young Minds",
+      "title": "Webitor Primary School"
+    },
+    "page_header": {
+      "subtitle": "Essential information for parents and carers",
+      "title": "Parent Hub"
+    },
+    "parent_partnership": {
+      "heading": "Parent Partnership",
+      "intro": "We believe parents are partners in their child's education. There are many ways to get involved:",
+      "opportunities": [
         {
-          "icon": "📱",
-          "title": "School App",
-          "description": "Download our school app for instant updates, news, and the ability to report absences."
+          "contact": "Contact: pta@webitorprimary.sch.uk",
+          "description": "Our active PTA organizes fundraising events and social activities throughout the year. New members always welcome!",
+          "icon": "🎉",
+          "title": "PTA (Parent-Teacher Association)"
         },
         {
-          "icon": "📧",
-          "title": "Weekly Newsletter",
-          "description": "Sent every Friday via email and available on our website."
+          "contact": "Contact: office@webitorprimary.sch.uk",
+          "description": "Help with reading, accompany school trips, or assist with events. All volunteers require a DBS check.",
+          "icon": "👨‍🏫",
+          "title": "Parent Volunteers"
         },
         {
-          "icon": "📚",
-          "title": "Seesaw",
-          "description": "Our online learning platform where teachers share work and celebrate achievements."
-        },
-        {
-          "icon": "👥",
-          "title": "Parent Consultations",
-          "description": "Termly meetings to discuss your child's progress - dates sent in advance."
+          "description": "Join our governing body and help shape the strategic direction of the school.",
+          "icon": "🗳️",
+          "note": "Elections held when vacancies arise - watch for announcements.",
+          "title": "Parent Governors"
         }
       ]
+    },
+    "policies": {
+      "documents": [
+        "Safeguarding & Child Protection Policy",
+        "Behaviour Policy",
+        "Anti-Bullying Policy",
+        "SEND Policy",
+        "Attendance Policy",
+        "Complaints Procedure"
+      ],
+      "heading": "Policies & Documents"
     },
     "supporting_learning": {
       "heading": "Supporting Learning at Home",
-      "reading": {
-        "title": "📖 Reading",
-        "description": "Children should read at home for at least 10-15 minutes daily. Please sign the reading record to help us track progress."
-      },
       "homework": {
-        "title": "✏️ Homework",
         "levels": [
           {
             "level": "Reception & KS1:",
@@ -134,58 +128,64 @@
             "level": "Years 5-6:",
             "work": "Reading, spellings, and English or Maths homework (45 mins)"
           }
-        ]
+        ],
+        "title": "✏️ Homework"
+      },
+      "reading": {
+        "description": "Children should read at home for at least 10-15 minutes daily. Please sign the reading record to help us track progress.",
+        "title": "📖 Reading"
       },
       "times_tables": {
-        "title": "🔢 Times Tables",
-        "description": "Children in Years 2-6 should practice times tables regularly. We recommend Times Tables Rock Stars (online login provided)."
+        "description": "Children in Years 2-6 should practice times tables regularly. We recommend Times Tables Rock Stars (online login provided).",
+        "title": "🔢 Times Tables"
       }
     },
-    "parent_partnership": {
-      "heading": "Parent Partnership",
-      "intro": "We believe parents are partners in their child's education. There are many ways to get involved:",
-      "opportunities": [
+    "term_dates": {
+      "heading": "Term Dates 2025-26",
+      "inset_days": {
+        "dates": "5th January 2026, 28th March 2026, 6th July 2026, 17th July 2026, 4th September 2026",
+        "heading": "INSET Days (school closed to pupils):"
+      },
+      "terms": [
         {
-          "icon": "🎉",
-          "title": "PTA (Parent-Teacher Association)",
-          "description": "Our active PTA organizes fundraising events and social activities throughout the year. New members always welcome!",
-          "contact": "Contact: pta@webitorprimary.sch.uk"
+          "end": "Friday 27th March 2026",
+          "half_term": "17th-21st February 2026",
+          "name": "Spring Term 2026",
+          "start": "Monday 6th January 2026"
         },
         {
-          "icon": "👨‍🏫",
-          "title": "Parent Volunteers",
-          "description": "Help with reading, accompany school trips, or assist with events. All volunteers require a DBS check.",
-          "contact": "Contact: office@webitorprimary.sch.uk"
+          "end": "Friday 17th July 2026",
+          "half_term": "25th-29th May 2026",
+          "name": "Summer Term 2026",
+          "start": "Monday 13th April 2026"
         },
         {
-          "icon": "🗳️",
-          "title": "Parent Governors",
-          "description": "Join our governing body and help shape the strategic direction of the school.",
-          "note": "Elections held when vacancies arise - watch for announcements."
+          "end": "Friday 18th December 2026",
+          "half_term": "26th-30th October 2026",
+          "name": "Autumn Term 2026",
+          "start": "Monday 7th September 2026"
         }
       ]
     },
-    "policies": {
-      "heading": "Policies & Documents",
-      "documents": [
-        "Safeguarding & Child Protection Policy",
-        "Behaviour Policy",
-        "Anti-Bullying Policy",
-        "SEND Policy",
-        "Attendance Policy",
-        "Complaints Procedure"
-      ]
-    },
-    "footer": {
-      "school_info": {
-        "heading": "Webitor Primary School",
-        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
+    "wraparound_care": {
+      "after_school_club": {
+        "cost": "Cost: £10 per session (3:15-6:00pm)\n£6 per session (3:15-4:30pm)",
+        "description": "Includes snacks, homework support, and enrichment activities.",
+        "time": "Time: 3:15pm - 6:00pm",
+        "title": "🌙 After School Club"
       },
-      "contact_info": {
-        "heading": "Contact Us",
-        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
+      "booking": "Booking: Must be booked in advance via the school office. Limited spaces available.",
+      "breakfast_club": {
+        "cost": "Cost: £4.50 per session",
+        "description": "Includes healthy breakfast and supervised activities.",
+        "time": "Time: 7:45am - 8:45am",
+        "title": "🌅 Breakfast Club"
       },
-      "copyright": "© 2026 Webitor Primary School. All rights reserved."
+      "heading": "Wraparound Care",
+      "image": "[Image: pexels-yankrukov-8617938.jpg]",
+      "image_alt": "Children at after school club"
     }
-  }
+  },
+  "page": "parents",
+  "version": "1.0"
 }
