@@ -1,128 +1,128 @@
 {
+  "version": "1.0",
+  "page": "index",
   "data": {
+    "header": {
+      "title": "Webitor Primary School",
+      "tagline": "Inspiring Young Minds"
+    },
+    "hero": {
+      "title": "Welcome to Webitor Primary School",
+      "subtitle": "A nurturing environment where every child thrives",
+      "cta_text": "Apply Now",
+      "cta_link": "admissions.html"
+    },
     "announcement": {
       "label": "Latest News:",
       "text": "Spring Term begins Monday 6th January 2026 | Open Day - Saturday 25th January 10am-2pm"
     },
-    "features": {
-      "heading": "Why Choose Webitor Primary?",
-      "items": [
-        {
-          "description": "Experienced, passionate teachers committed to excellence in education",
-          "icon": "📚",
-          "title": "Outstanding Teaching"
-        },
-        {
-          "description": "Rated Outstanding in all areas by Ofsted inspectors",
-          "icon": "🌟",
-          "title": "Ofsted Outstanding"
-        },
-        {
-          "description": "Enriching opportunities in arts, music, drama, and sports",
-          "icon": "🎨",
-          "title": "Creative Curriculum"
-        },
-        {
-          "description": "Supportive partnership between school, families, and the community",
-          "icon": "👨‍👩‍👧‍👦",
-          "title": "Strong Community"
-        },
-        {
-          "description": "Well-resourced classrooms with the latest learning technology",
-          "icon": "💻",
-          "title": "Modern Facilities"
-        },
-        {
-          "description": "Dedicated wellbeing support for every child's emotional health",
-          "icon": "🤝",
-          "title": "Pastoral Care"
-        }
-      ]
-    },
-    "footer": {
-      "contact_info": {
-        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm",
-        "heading": "Contact Us"
-      },
-      "copyright": "© 2026 Webitor Primary School. All rights reserved.",
-      "school_info": {
-        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom",
-        "heading": "Webitor Primary School"
-      }
-    },
-    "header": {
-      "tagline": "Inspiring Young Minds",
-      "title": "Webitor Primary School"
-    },
-    "hero": {
-      "cta_link": "admissions.html",
-      "cta_text": "Apply Now",
-      "subtitle": "A nurturing environment where every child thrives",
-      "title": "Welcome to Webitor Primary School"
-    },
-    "news_preview": {
-      "articles": [
-        {
-          "date": "15 December 2025",
-          "excerpt": "Our Year 2 pupils delighted audiences with their wonderful nativity performance.",
-          "id": "news-1",
-          "image": "images/christmas-play.jpg",
-          "image_alt": "Christmas nativity performance",
-          "link": "news.html",
-          "title": "Christmas Nativity Success"
-        },
-        {
-          "date": "10 December 2025",
-          "excerpt": "Fantastic effort from all year groups at our annual winter sports festival.",
-          "id": "news-2",
-          "image": "images/sports-day.jpg",
-          "image_alt": "Sports day activities",
-          "link": "news.html",
-          "title": "Winter Sports Festival"
-        },
-        {
-          "date": "5 December 2025",
-          "excerpt": "Celebrating our pupils who have achieved their reading milestones.",
-          "id": "news-3",
-          "image": "images/reading-award.jpg",
-          "image_alt": "Students with reading awards",
-          "link": "news.html",
-          "title": "Reading Champions"
-        }
-      ],
-      "heading": "Latest News & Events",
-      "view_all_link": "news.html",
-      "view_all_text": "View All News"
-    },
-    "quick_links": [
-      {
-        "description": "Find out how to apply for a place at our school",
-        "link": "admissions.html",
-        "title": "Admissions"
-      },
-      {
-        "description": "Term dates, policies, and important information",
-        "link": "parents.html",
-        "title": "Parent Hub"
-      },
-      {
-        "description": "Discover our approach to teaching and learning",
-        "link": "curriculum.html",
-        "title": "Our Curriculum"
-      }
-    ],
     "welcome": {
       "heading": "Welcome from Our Headteacher",
-      "image": "images/students-learning.jpg",
-      "image_alt": "Students engaged in learning",
       "paragraphs": [
         "At Webitor Primary School, we are committed to providing an outstanding education for all our pupils. Our dedicated staff work tirelessly to ensure every child reaches their full potential in a safe, nurturing environment.",
         "We believe in developing the whole child - academically, socially, and emotionally. Our broad and balanced curriculum is designed to inspire curiosity, creativity, and a lifelong love of learning."
       ],
       "signature": "Mrs. Sarah Thompson",
-      "signature_title": "Headteacher"
+      "signature_title": "Headteacher",
+      "image": "images/students-learning.jpg",
+      "image_alt": "Students engaged in learning"
+    },
+    "features": {
+      "heading": "Why Choose Webitor Primary?",
+      "items": [
+        {
+          "icon": "📚",
+          "title": "Outstanding Teaching",
+          "description": "Experienced, passionate teachers committed to excellence in education"
+        },
+        {
+          "icon": "🌟",
+          "title": "Ofsted Outstanding",
+          "description": "Rated Outstanding in all areas by Ofsted inspectors"
+        },
+        {
+          "icon": "🎨",
+          "title": "Creative Curriculum",
+          "description": "Enriching opportunities in arts, music, drama, and sports"
+        },
+        {
+          "icon": "👨‍👩‍👧‍👦",
+          "title": "Strong Community",
+          "description": "Supportive partnership between school, families, and the community"
+        },
+        {
+          "icon": "💻",
+          "title": "Modern Facilities",
+          "description": "Well-resourced classrooms with the latest learning technology"
+        },
+        {
+          "icon": "🤝",
+          "title": "Pastoral Care",
+          "description": "Dedicated wellbeing support for every child's emotional health"
+        }
+      ]
+    },
+    "quick_links": [
+      {
+        "title": "Admissions",
+        "description": "Find out how to apply for a place at our school",
+        "link": "admissions.html"
+      },
+      {
+        "title": "Parent Hub",
+        "description": "Term dates, policies, and important information",
+        "link": "parents.html"
+      },
+      {
+        "title": "Our Curriculum",
+        "description": "Discover our approach to teaching and learning",
+        "link": "curriculum.html"
+      }
+    ],
+    "news_preview": {
+      "heading": "Latest News & Events",
+      "articles": [
+        {
+          "id": "news-1",
+          "image": "images/christmas-play.jpg",
+          "image_alt": "Christmas nativity performance",
+          "date": "15 December 2025",
+          "title": "Christmas Nativity Success",
+          "excerpt": "Our Year 2 pupils delighted audiences with their wonderful nativity performance.",
+          "link": "news.html"
+        },
+        {
+          "id": "news-2",
+          "image": "images/sports-day.jpg",
+          "image_alt": "Sports day activities",
+          "date": "10 December 2025",
+          "title": "Winter Sports Festival",
+          "excerpt": "Fantastic effort from all year groups at our annual winter sports festival.",
+          "link": "news.html"
+        },
+        {
+          "id": "news-3",
+          "image": "images/reading-award.jpg",
+          "image_alt": "Students with reading awards",
+          "date": "5 December 2025",
+          "title": "Reading Champions",
+          "excerpt": "Celebrating our pupils who have achieved their reading milestones.",
+          "link": "news.html"
+        }
+      ],
+      "view_all_text": "View All News",
+      "view_all_link": "news.html"
+    },
+    "footer": {
+      "school_info": {
+        "heading": "Webitor Primary School",
+        "address": "123 Education Lane\nLondon, SW1A 1AA\nUnited Kingdom"
+      },
+      "contact_info": {
+        "heading": "Contact Us",
+        "details": "Tel: 020 1234 5678\nEmail: office@webitorprimary.sch.uk\nMonday-Friday: 8:00am - 4:00pm"
+      },
+      "copyright": "© 2026 Webitor Primary School. All rights reserved."
     }
-  },
-  "page": "index",
-  "version": "1.0"
+  }
 }

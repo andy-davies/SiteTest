@@ -71,7 +71,8 @@ const WebitorData = (function() {
 
       if (value !== undefined) {
         if (element.tagName === 'IMG') {
-          element.src = value;
+          // Add cache buster for image URLs (skip for data URLs)
+          element.src = value.startsWith('data:') ? value : value + '?_=' + Date.now();
         } else {
           element.textContent = value;
         }
@@ -97,7 +98,8 @@ const WebitorData = (function() {
       const fullPath = prefix ? `${prefix}.${path}` : path;
       const value = getValueByPath(data, path);
       if (value !== undefined) {
-        element.src = value;
+        // Add cache buster for image URLs (skip for data URLs)
+        element.src = value.startsWith('data:') ? value : value + '?_=' + Date.now();
         // Mark images as editable for the Webitor extension
         element.setAttribute('data-editable-image', 'true');
         element.setAttribute('data-path', fullPath);
@@ -179,7 +181,8 @@ const WebitorData = (function() {
       const path = element.getAttribute('data-bind-src');
       const value = getValueByPath(data, path);
       if (value !== undefined) {
-        element.src = value;
+        // Add cache buster for image URLs (skip for data URLs)
+        element.src = value.startsWith('data:') ? value : value + '?_=' + Date.now();
         element.setAttribute('data-editable-image', 'true');
         element.setAttribute('data-path', `${basePath}.${path}`);
       }
