@@ -1,18 +1,5 @@
 {
-  "version": "1.0",
-  "page": "elmathud",
-  "template": "teacher",
   "data": {
-    "page_header": {
-      "title": "ElmaThud",
-      "subtitle": "Staff Profile"
-    },
-    "profile": {
-      "name": "Teacher Name",
-      "role": "Position / Subject",
-      "email": "teacher@school.edu",
-      "image": "images/placeholder-teacher.jpg"
-    },
     "biography": {
       "heading": "About Me",
       "paragraphs": [
@@ -20,14 +7,32 @@
         "Enter biography paragraph two here. Include information about your experience and interests."
       ]
     },
+    "page_header": {
+      "subtitle": "Staff Profile",
+      "title": "ElmaThud"
+    },
+    "profile": {
+      "email": "teacher@school.edu",
+      "image": "images/placeholder-teacher.jpg",
+      "name": "Elma Thud",
+      "role": "Rabbit Catcher"
+    },
     "qualifications": {
       "heading": "Qualifications & Experience",
       "items": [
-        { "text": "Bachelor of Education" },
-        { "text": "5+ years teaching experience" },
-        { "text": "Specialist in curriculum area" },
-        { "text": "Additional qualification or achievement" }
+        {
+          "text": "Loves teaching children"
+        },
+        {
+          "text": "Bachelor of Education"
+        },
+        {
+          "text": "5+ years teaching experience"
+        }
       ]
     }
-  }
+  },
+  "page": "elmathud",
+  "template": "teacher",
+  "version": "1.0"
 }
